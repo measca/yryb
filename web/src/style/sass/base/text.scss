@@ -1,0 +1,95 @@
+@import "./variable";
+
+.text-left {
+  text-align: left;
+}
+.text-right {
+  text-align: right;
+}
+.text-center {
+  text-align: center;
+}
+.text-justify {
+  text-align: justify;
+}
+.text-nowrap {
+  white-space: nowrap;
+}
+.text-ellipsis {
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+.text-lowercase {
+  text-transform: lowercase;
+}
+.text-uppercase {
+  text-transform: uppercase;
+}
+.text-capitalize {
+  text-transform: capitalize;
+}
+.text-muted {
+  color: $muted;
+}
+.text-primary {
+  color: $primary;
+}
+a.text-primary:hover {
+  color: $primary-hover;
+}
+.text-success {
+  color: $success;
+}
+a.text-success:hover {
+  color: $success-hover;
+}
+.text-info {
+  color: $info;
+}
+a.text-info:hover {
+  color: $info-hover;
+}
+.text-warning {
+  color: $warning;
+}
+a.text-warning:hover {
+  color: $warning-hover;
+}
+.text-danger {
+  color: $danger;
+}
+a.text-danger:hover {
+  color: $danger-hover;
+}
+.bg-primary {
+  color: $bg-primary-color;
+  background-color: $bg-primary;
+}
+a.bg-primary:hover {
+  background-color: $bg-primary-hover;
+}
+.bg-success {
+  background-color: $bg-success;
+}
+a.bg-success:hover {
+  background-color: $bg-success-hover;
+}
+.bg-info {
+  background-color: $bg-info;
+}
+a.bg-info:hover {
+  background-color: $bg-info-hover;
+}
+.bg-warning {
+  background-color: $bg-warning;
+}
+a.bg-warning:hover {
+  background-color: $bg-warning-hover;
+}
+.bg-danger {
+  background-color: $bg-danger;
+}
+a.bg-danger:hover {
+  background-color: $bg-danger-hover;
+}

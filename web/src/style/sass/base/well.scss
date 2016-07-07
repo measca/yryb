@@ -1,0 +1,33 @@
+.well {
+    min-height: 20px;
+    padding: 19px;
+    margin-bottom: 20px;
+    background-color: #e0e0e0;
+    border: none;
+    border-radius: 2px;
+    -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.08);
+    box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.08);
+
+    blockquote {
+        border-color: #ddd;
+        border-color: rgba(0, 0, 0, 0.15);
+    }
+
+    &.well-transparent {
+        background: none;
+    }
+
+    &.well-code {
+        font-size: 11px;
+        font-family: Monaco, Menlo, Consolas, "Courier New", monospace;
+    }
+
+    &.well-lg {
+        padding: 40px;
+        border-radius: 3px;
+    }
+    &.well-sm {
+        padding: 8px;
+        border-radius: 1px;
+    }
+}

@@ -1,0 +1,526 @@
+<!DOCTYPE html>
+<html lang="zh-cmn-Hans">
+
+<head>
+    <title></title>
+    <meta charset="UTF-8">
+    <link href="css/style.css" rel="stylesheet">
+    <link href="fonts/font-awesome/css/font-awesome.css" rel="stylesheet">
+    <link href="css/index.css" rel="stylesheet">
+    <link href="css/prettify.css" rel="stylesheet">
+    <style>
+        .pagination {
+            margin: 10px 0;
+        }
+        
+        .pagination > li > a:hover,
+        .pagination > li span:hover {
+            background: #eeeeee;
+        }
+        
+        .pager li > a,
+        .pager li span {
+            padding: 6px 15px;
+        }
+        
+        .panel-color-list {
+            padding: 0px;
+            text-align: left;
+            margin: 0;
+            padding-left: 0;
+            list-style: none;
+            margin-left: -5px;
+        }
+        
+        .panel-color-list > li {
+            display: inline-block;
+            padding-left: 5px;
+            padding-right: 5px;
+        }
+        
+        .panel-color-list li {
+            margin-right: 2px;
+        }
+        
+        .panel-color-list li span {
+            border-radius: 10px;
+            display: inline-block;
+        }
+        
+        .panel-color-list li,
+        .panel-color-list li span {
+            height: 20px;
+            width: 20px;
+            margin-bottom: -4px;
+        }
+        
+        .panel-color-list li:hover,
+        .panel-color-list li span:hover {
+            cursor: pointer;
+        }
+        
+        .panel-color-list.text-center {
+            text-align: center;
+        }
+        
+        span[data-style="panel-default"] {
+            background-color: #fafafa;
+        }
+        
+        span[data-style="panel-inverse"] {
+            background-color: #9e9e9e;
+        }
+        
+        span[data-style="panel-primary"] {
+            background-color: #03a9f4;
+        }
+        
+        span[data-style="panel-success"] {
+            background-color: #8bc34a;
+        }
+        
+        span[data-style="panel-warning"] {
+            background-color: #ffeb3b;
+        }
+        
+        span[data-style="panel-danger"] {
+            background-color: #e51c23;
+        }
+        
+        span[data-style="panel-info"] {
+            background-color: #00bcd4;
+        }
+        
+        span[data-style="panel-brown"] {
+            background-color: #795548;
+        }
+        
+        span[data-style="panel-indigo"] {
+            background-color: #3f51b5;
+        }
+        
+        span[data-style="panel-orange"] {
+            background-color: #ff9800;
+        }
+        
+        span[data-style="panel-midnightblue"] {
+            background-color: #37474f;
+        }
+        
+        span[data-style="panel-sky"] {
+            background-color: #009688;
+        }
+        
+        span[data-style="panel-magenta"] {
+            background-color: #e91e63;
+        }
+        
+        span[data-style="panel-purple"] {
+            background-color: #9c27b0;
+        }
+        
+        span[data-style="panel-green"] {
+            background-color: #4caf50;
+        }
+        
+        span[data-style="panel-grape"] {
+            background-color: #cddc39;
+        }
+        
+        span[data-style="panel-toyo"] {
+            background-color: #ffc107;
+        }
+        
+        span[data-style="panel-alizarin"] {
+            background-color: #ff5722;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="index-banner">
+        <div class="index-container pl20 pr20">
+         <h1>Web Component</h1>
+      <p>Compatible with most browsers</p>
+        </div>
+    </div>
+    <div class="index-container row pt30 pb50">
+        <div class="col-md-3">
+            <ul class="index-nav">
+                <li class="index-nav-header">Base组件</li>
+                <li><a href="./breadcrumbs.html">Breadcrumbs<span class="index-nav-en">breadcrumbs</span></a></li>
+                <li><a href="./btn.html">Button<span class="index-nav-en">btn</span></a></li>
+                <li><a href="./fontIco.html">FontIco<span class="index-nav-en">ico</span></a></li>
+                <li><a href="./form.html">Form<span class="index-nav-en">form</span></a></li>
+                <li><a href="./Grid.html">Grid<span class="index-nav-en">grid</span></a></li>
+                <li><a href="./image.html">Image<span class="index-nav-en">image</span></a></li>
+                <li><a href="./labels.html">Labels<span class="index-nav-en">labels</span></a></li>
+                <li><a href="./page.html">Page<span class="index-nav-en">page</span></a></li>
+                <li><a href="./panel.html">Panel<span class="index-nav-en">panel</span></a></li>
+                <li><a href="./table.html">Table<span class="index-nav-en">table</span></a></li>
+                <li><a href="./tabs.html">Tab<span class="index-nav-en">tab</span></a></li>
+                <li><a href="./typography.html">Typography<span class="index-nav-en">typography</span></a></li>
+                <li><a href="./wells.html">Wells<span class="index-nav-en">wells</span></a></li>
+            </ul>
+        </div>
+        <div class="col-md-9">
+            <div class="row">
+                <div class="col-md-12 text-center">
+                    <h2 class="mt0 mb20">Panel Colors</h2>
+                    <ul class="text-center panel-color-list list-inline mb40">
+                        <li><span data-style="panel-default"></span></li>
+                        <li><span data-style="panel-inverse"></span></li>
+                        <li><span data-style="panel-primary"></span></li>
+                        <li><span data-style="panel-success"></span></li>
+                        <li><span data-style="panel-warning"></span></li>
+                        <li><span data-style="panel-danger"></span></li>
+                        <li><span data-style="panel-info"></span></li>
+                        <li><span data-style="panel-brown"></span></li>
+                        <li><span data-style="panel-indigo"></span></li>
+                        <li><span data-style="panel-orange"></span></li>
+                        <li><span data-style="panel-midnightblue"></span></li>
+                        <li><span data-style="panel-sky"></span></li>
+                        <li><span data-style="panel-magenta"></span></li>
+                        <li><span data-style="panel-purple"></span></li>
+                        <li><span data-style="panel-green"></span></li>
+                        <li><span data-style="panel-grape"></span></li>
+                        <li><span data-style="panel-toyo"></span></li>
+                        <li><span data-style="panel-alizarin"></span></li>
+                    </ul>
+                </div>
+            </div>
+            <hr>
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <h2>Panel</h2>
+                </div>
+                <div class="panel-body" style="height: 190px">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsam, obcaecati, possimus, deleniti ipsa autem
+                        optio consectetur ratione modi neque fugiat provident amet saepe repellendus aliquam quam sit cumque
+                        suscipit dicta nobis eligendi eius ullam nostrum impedit nobis.</p>
+                </div>
+            </div>
+            <hr>
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                            <h2>Panel with Footer</h2>
+                        </div>
+                        <div class="panel-body">
+                            <p class="mb20">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsam, obcaecati, possimus, deleniti
+                                ipsa autem optio consectetur ratione modi neque fugiat provident amet saepe repellendus aliquam
+                                quam sit cumque suscipit dicta nobis eligendi eius ullam nostrum impedit nobis.</p>
+                            <div class="panel-footer">
+                                <span class="text-gray">Footer</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                            <h2>Panel with Footer</h2>
+                        </div>
+                        <div class="panel-body">
+                            <p class="mb20">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsam, obcaecati, possimus, deleniti
+                                ipsa autem optio consectetur ratione modi neque fugiat provident amet saepe repellendus aliquam
+                                quam sit cumque suscipit dicta nobis eligendi eius ullam nostrum impedit nobis.</p>
+                            <div class="panel-footer">
+                                <span class="text-gray">Footer</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <hr>
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <h2>Nestable Panles</h2>
+                </div>
+                <div class="panel-body pb0">
+                    <p class="mb20">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Totam, iure cum perferendis esse voluptate
+                        similique harum. Nostrum quo id temporibus accusamus tempore? Deleniti, aliquam, beatae, aliquid,
+                        voluptates sed reiciendis dolorem sunt sequi doloribus sapiente natus incidunt amet? Maiores, deleniti
+                        iure culpa veniam expedita. Praesentium dolor sapiente laboriosam nobis libero quam! Et, repudiandae,
+                        quia suscipit distinctio voluptas modi aliquid ex. Veniam, perspiciatis, eaque fugiat soluta ratione
+                        sequi qui voluptatibus? Aspernatur, ex, provident, illo deleniti architecto repudiandae est exercitationem
+                        repellat quod illum maiores harum optio dicta. Deleniti, officiis, veniam, perferendis saepe non
+                        dolorem delectus cum libero excepturi eos pariatur animi ea ullam nesciunt magnam illo aliquam?</p>
+
+                    <div class="row">
+                        <div class="col-md-4">
+                            <div class="panel panel-default">
+                                <div class="panel-heading">
+                                    <h2>Panel</h2>
+                                </div>
+                                <div class="panel-body">
+                                    <p class="mb0">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Totam, iure cum perferendis
+                                        esse voluptate similique harum. Nostrum quo id temporibus accusamus tempore? Deleniti,
+                                        aliquam, beatae, aliquid, voluptates sed reiciendis dolorem sunt sequi doloribus
+                                        sapiente natus incidunt amet?</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="panel panel-default">
+                                <div class="panel-heading">
+                                    <h2>Panel</h2>
+                                </div>
+                                <div class="panel-body">
+                                    <p class="mb0">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Totam, iure cum perferendis
+                                        esse voluptate similique harum. Nostrum quo id temporibus accusamus tempore? Deleniti,
+                                        aliquam, beatae, aliquid, voluptates sed reiciendis dolorem sunt sequi doloribus
+                                        sapiente natus incidunt amet?</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="panel panel-default">
+                                <div class="panel-heading">
+                                    <h2>Panel</h2>
+                                </div>
+                                <div class="panel-body">
+                                    <p class="mb0">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Totam, iure cum perferendis
+                                        esse voluptate similique harum. Nostrum quo id temporibus accusamus tempore? Deleniti,
+                                        aliquam, beatae, aliquid, voluptates sed reiciendis dolorem sunt sequi doloribus
+                                        sapiente natus incidunt amet?</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="panel panel-default">
+                                <div class="panel-heading">
+                                    <h2>Panel</h2>
+                                </div>
+                                <div class="panel-body">
+                                    <p class="mb0">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Totam, iure cum perferendis
+                                        esse voluptate similique harum. Nostrum quo id temporibus accusamus tempore? Deleniti,
+                                        aliquam, beatae, aliquid, voluptates sed reiciendis dolorem sunt sequi doloribus
+                                        sapiente natus incidunt amet? Maiores, deleniti iure culpa veniam expedita.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="panel panel-default">
+                                <div class="panel-heading">
+                                    <h2>Panel</h2>
+                                </div>
+                                <div class="panel-body">
+                                    <p class="mb0">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Totam, iure cum perferendis
+                                        esse voluptate similique harum. Nostrum quo id temporibus accusamus tempore? Deleniti,
+                                        aliquam, beatae, aliquid, voluptates sed reiciendis dolorem sunt sequi doloribus
+                                        sapiente natus incidunt amet? Maiores, deleniti iure culpa veniam expedita.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+            <hr>
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                            <h2>Buttons</h2>
+                            <div class="panel-ctrls">
+                                <a href="#" class="btn btn-sm btn-default">Button</a>
+                                <div class="btn-group">
+                                    <a href="javascript:;" class="btn btn-sm btn-default">Button</a>
+                                    <div class="btn-group dropdown">
+                                        <a href="javascript:;" class="btn btn-sm btn-default dropdown-toggle" data-toggle="dropdown">Dropdown <i class="caret"></i></a>
+                                        <ul class="dropdown-menu" role="menu">
+                                            <li><a role="menuitem" tabindex="-1" href="#">Action</a></li>
+                                            <li><a role="menuitem" tabindex="-1" href="#">Another action</a></li>
+                                            <li><a role="menuitem" tabindex="-1" href="#">Something else here</a></li>
+                                            <li class="divider"></li>
+                                            <li><a role="menuitem" tabindex="-1" href="#">Separated link</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="panel-body">
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatum, eos, ex ipsa quo quos adipisci
+                                fuga praesentium aspernatur reprehenderit asperiores illo provident distinctio earum quod
+                                similique dolor sunt excepturi sequi a id aliquam deleniti numquam accusamus tenetur quaerat
+                                magnam dolorum natus debitis tempora in laboriosam nesciunt tempore ipsam voluptatibus quasi
+                                vel quibusdam sit atque aliquid temporibus officiis incidunt perspiciatis mollitia totam
+                                reiciendis consequuntur.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-6">
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                            <h2>Pagination</h2>
+                            <div class="panel-ctrls">
+                                <ul class="pagination pagination-sm clearfix">
+                                    <li class="disabled"><a href="#"><i class="fa fa-angle-left"></i></a></li>
+                                    <li class="active"><a href="#">1</a></li>
+                                    <li><a href="#">2</a></li>
+                                    <li><a href="#">3</a></li>
+                                    <li><a href="#"><i class="fa fa-angle-right"></i></a></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="panel-body">
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatum, eos, ex ipsa quo quos adipisci
+                                fuga praesentium aspernatur reprehenderit asperiores illo provident distinctio earum quod
+                                similique dolor sunt excepturi sequi a id aliquam deleniti numquam accusamus tenetur quaerat
+                                magnam dolorum natus debitis tempora in laboriosam nesciunt tempore ipsam voluptatibus quasi
+                                vel quibusdam sit atque aliquid temporibus officiis incidunt perspiciatis mollitia totam
+                                reiciendis consequuntur.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <hr>
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <h2>Labels and Badges</h2>
+                    <div class="panel-ctrls">
+                        <i class="separator"></i>
+                        <div class="badge badge-info">99</div>
+                        <i class="separator"></i>
+                        <div class="label label-primary"><i class="fa fa-cloud"></i> 23.5%</div>
+
+                    </div>
+                </div>
+                <div class="panel-body">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatum, eos, ex ipsa quo quos adipisci
+                        fuga praesentium aspernatur reprehenderit asperiores illo provident distinctio earum quod similique
+                        dolor sunt excepturi sequi a id aliquam deleniti numquam accusamus tenetur quaerat magnam dolorum
+                        natus debitis tempora in laboriosam nesciunt tempore ipsam voluptatibus quasi vel quibusdam sit atque
+                        aliquid temporibus officiis incidunt perspiciatis mollitia totam reiciendis consequuntur.</p>
+                </div>
+            </div>
+            <hr>
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="panel panel-default">
+                        <div class="panel-heading"></div>
+                        <div class="panel-body">
+                            <h3 class="mt0">Without Heading</h3>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reiciendis, corrupti, mollitia iusto
+                                perferendis corporis similique tempora dolores! Temporibus, error, vitae, harum deserunt
+                                recusandae repellat quo odit incidunt quam molestiae eveniet sint nisi! Aspernatur ullam
+                                doloremque dolorum dolore illo perferendis atque.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="panel panel-default">
+                        <div class="panel-heading"></div>
+                        <div class="panel-body">
+                            <h3 class="mt0">Without Heading</h3>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reiciendis, corrupti, mollitia iusto
+                                perferendis corporis similique tempora dolores! Temporibus, error, vitae, harum deserunt
+                                recusandae repellat quo odit incidunt quam molestiae eveniet sint nisi! Aspernatur ullam
+                                doloremque dolorum dolore illo perferendis atque.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <hr>
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                            <h2><i class="fa fa-cloud"></i>Panel</h2>
+                        </div>
+                        <div class="panel-body">
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officiis, aut, vitae, facere tempore
+                                quia sint maxime assumenda quasi porro architecto asperiores reiciendis laborum expedita
+                                animi consectetur atque beatae.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                            <h2><i class="fa fa-globe"></i>Panel</h2>
+                        </div>
+                        <div class="panel-body">
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officiis, aut, vitae, facere tempore
+                                quia sint maxime assumenda quasi porro architecto asperiores reiciendis laborum expedita
+                                animi consectetur atque beatae.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                            <h2><i class="fa fa-moon-o"></i>Panel</h2>
+                        </div>
+                        <div class="panel-body">
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officiis, aut, vitae, facere tempore
+                                quia sint maxime assumenda quasi porro architecto asperiores reiciendis laborum expedita
+                                animi consectetur atque beatae.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <hr>
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                            <h2><i class="fa fa-anchor"></i>Panel</h2>
+                            <div class="panel-ctrls">
+                                <a href="#" class="button-icon"><i class="fa fa-file"></i></a>
+                                <a href="#" class="button-icon"><i class="fa fa-code"></i></a>
+                                <a href="#" class="button-icon"><i class="fa fa-circle-o"></i></a>
+                            </div>
+                        </div>
+                        <div class="panel-body">
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officiis, aut, vitae, facere tempore
+                                quia sint maxime assumenda quasi porro architecto asperiores reiciendis laborum expedita
+                                animi consectetur atque beatae.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                            <h2><i class="fa fa-microphone"></i>Panel</h2>
+                            <div class="panel-ctrls">
+                                <a href="#" class="button-icon"><i class="fa fa-file"></i></a>
+                                <a href="#" class="button-icon"><i class="fa fa-code"></i></a>
+                                <a href="#" class="button-icon"><i class="fa fa-circle-o"></i></a>
+                            </div>
+                        </div>
+                        <div class="panel-body">
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officiis, aut, vitae, facere tempore
+                                quia sint maxime assumenda quasi porro architecto asperiores reiciendis laborum expedita
+                                animi consectetur atque beatae.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                            <h2><i class="fa fa-briefcase"></i>Panel</h2>
+                            <div class="panel-ctrls">
+                                <a href="#" class="button-icon"><i class="fa fa-file"></i></a>
+                                <a href="#" class="button-icon"><i class="fa fa-code"></i></a>
+                                <a href="#" class="button-icon"><i class="fa fa-circle-o"></i></a>
+                            </div>
+                        </div>
+                        <div class="panel-body">
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officiis, aut, vitae, facere tempore
+                                quia sint maxime assumenda quasi porro architecto asperiores reiciendis laborum expedita
+                                animi consectetur atque beatae.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

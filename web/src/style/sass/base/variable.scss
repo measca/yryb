@@ -1,0 +1,70 @@
+//margin 变量
+$ms:(
+    "0": 0px,
+    "5": 4px,
+    "10": 8px,
+    "15": 12px,
+    "20": 16px,
+    "25": 20px,
+    "30": 24px,
+    "35": 28px,
+    "40": 32px,
+    "45": 36px,
+    "50": 40px);
+$ps: (
+    "0": 0px,
+    "5": 4px,
+    "10": 8px,
+    "15": 12px,
+    "20": 16px,
+    "25": 20px,
+    "30": 24px,
+    "35": 28px,
+    "40": 32px,
+    "45": 36px,
+    "50": 40px);
+
+//grid
+$gutter: 24px;
+$section: 12;
+$sizes: (
+    xs: null,
+    sm: 768px,
+    md: 992px,
+    lg: 1200px
+);
+
+//blockquote
+$margin-blockquote: 0 0 20px;
+$font-size-blockquote: 16.25px;
+$border-left-blockquote: 4px solid #cfd8dc;
+$padding-blockquote: 0 20px;
+$small-footer-color-blockquote: #90a4ae;
+$pull-right-blockquote: 4px;
+$blockquote-right: 15px;
+
+
+//color
+$muted: #90a4ae;
+$primary: #03a9f4;
+$primary-hover: #0286c2;
+$success: #558b2f;
+$success-hover: #3e6522;
+$info: #00838f;
+$info-hover: #00545c;
+$warning: #f9a825;
+$warning-hover: #e59006;
+$danger: #c41411;
+$danger-hover: #950f0d;
+
+$bg-primary-color: #fff;
+$bg-primary:#03a9f4;
+$bg-primary-hover:#0286c2;
+$bg-success:#f1f8e9;
+$bg-success-hover:#d8ecc2;
+$bg-info: #e0f7fa;
+$bg-info-hover: #b4ecf3;
+$bg-warning: #fffde7;
+$bg-warning-hover: #fff9b4;
+$bg-danger: #fde0dc;
+$bg-danger-hover: #fab5ac;

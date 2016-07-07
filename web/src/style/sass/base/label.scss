@@ -1,0 +1,122 @@
+$colors: (
+    default: (
+        background-color: #90a4ae,
+        hover-background-color: #cc7a00
+    ),
+    primary: (
+        background-color: #03a9f4,
+        hover-background-color: #0286c2
+    ),
+    success: (
+        background-color: #8bc34a,
+        hover-background-color: #71a436
+    ),
+    info: (
+        background-color: #00bcd4,
+        hover-background-color: #008fa1
+    ),
+    warning: (
+        background-color: #ffeb3b,
+        hover-background-color: #ffe608
+    ),
+    danger: (
+        background-color: #e51c23,
+        hover-background-color: #b9151b
+    ),
+    orange: (
+        background-color: #ff9800,
+        hover-background-color: #738c98
+    ),
+    grape: (
+        background-color: #cddc39,
+        hover-background-color: #b2c022
+    ),
+    inverse: (
+        background-color: #9e9e9e,
+        hover-background-color: #858585
+    ),
+    sky: (
+        background-color: #009688,
+        hover-background-color: #00635a
+    ),
+    alizarin: (
+        background-color: #ff5722,
+        hover-background-color: #ee3900
+    ),
+    midnightblue: (
+        background-color: #37474f,
+        hover-background-color: #222c31
+    ),
+    green: (
+        background-color: #4caf50,
+        hover-background-color: #3d8b40
+    )
+);
+
+.label {
+    padding: 0.225em 0.3em;
+    font-family: 'Open Sans', 'Droid Sans', Tahoma, Arial, sans-serif;
+    font-weight: 600;
+    border-radius: 1px;
+    font-size: 85%;
+    display: inline-block;
+    text-transform: uppercase;
+    line-height: 1;
+    color: rgba(255, 255, 255, 0.9);
+
+    @each $key, $obj in $colors {
+        &.label-#{$key} {
+            background-color: map-get($obj, "background-color");
+
+            &[href]:hover,
+            &[href]:focus {
+            background-color: map-get($obj, "hover-background-color");
+            }
+        }
+    }
+}
+
+.badge {
+    padding: 1px 5px;
+    font-size: 11px;
+    font-family: 'Open Sans', 'Droid Sans', Tahoma, Arial, sans-serif;
+    line-height: 14px;
+    color: #ffffff;
+    color: rgba(255, 255, 255, 0.9);
+    display: inline-block;
+    min-width: 10px;
+    font-weight: 600;
+    vertical-align: baseline;
+    white-space: nowrap;
+    text-align: center;
+    background-color: #90a4ae;
+    border-radius: 8px;
+
+    &:empty {
+        display: none;
+    }
+
+    @each $key, $obj in $colors {
+        &.badge-#{$key} {
+            background-color: map-get($obj, "background-color");
+
+            &[href]:hover,
+            &[href]:focus {
+            background-color: map-get($obj, "hover-background-color");
+            }
+        }
+    }
+}
+
+.btn .label {
+  position: relative;
+  top: -1px;
+}
+.btn .badge {
+  position: relative;
+  top: -1px;
+}
+.btn-xs .badge {
+  top: 0;
+  padding: 1px 5px;
+}

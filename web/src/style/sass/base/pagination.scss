@@ -1,0 +1,166 @@
+$pagination-size: (
+    lg: (
+        padding: 10px 30px,
+        font-size: 18px,
+        radius: 3px
+    ),
+    sm: (
+        padding: 4px 12px,
+        font-size: 11px,
+        radius: 1px
+    )
+);
+
+.pagination {
+    display: inline-block;
+    padding-left: 0;
+    border-radius: 2px;
+    margin: 10px 0;
+
+    > li {
+        display: inline;
+
+        > a,
+        > span {
+            position: relative;
+            float: left;
+            line-height: 1.54;
+            text-decoration: none;
+            color: #03a9f4;
+            background-color: #ffffff;
+            border: 1px solid #e0e0e0;
+            margin-left: -1px;
+            padding: 6px 15px;
+        }
+
+        &:first-child > a,
+        &:first-child > span {
+            margin-left: 0;
+            border-bottom-left-radius: 2px;
+            border-top-left-radius: 2px;
+        }
+
+        &:last-child > a,
+        &:last-child > span {
+            border-bottom-right-radius: 2px;
+            border-top-right-radius: 2px;
+        }
+
+        &.omission {
+            float: left;
+            padding: 6px 10px;
+            color: #ccc;
+        }
+
+        > a:hover,
+        > span:hover,
+        > a:focus,
+        > span:focus {
+            color: #03a9f4;
+            background-color: #cfd8dc;
+            border-color: #dddddd;
+        }
+
+        > a:hover,
+        > span:hover {
+            background: #eeeeee;
+        }
+    }
+
+    > .active > a,
+    > .active > span,
+    > .active > a:hover,
+    > .active > span:hover,
+    > .active > a:focus,
+    > .active > span:focus {
+        z-index: 2;
+        color: #ffffff;
+        background-color: #03a9f4;
+        border-color: #03a9f4;
+        cursor: default;
+    }
+
+    > .disabled > span,
+    > .disabled > span:hover,
+    > .disabled > span:focus,
+    > .disabled > a,
+    > .disabled > a:hover,
+    > .disabled > a:focus {
+        color: #90a4ae;
+        background-color: #ffffff;
+        border-color: #dddddd;
+        cursor: not-allowed;
+    }
+
+    @each $key, $obj in $pagination-size {
+        &.pagination-#{$key} {
+            > li {
+                > a,
+                > span {
+                    padding: map-get($obj, "padding");
+                    font-size: map-get($obj, "font-size");
+                }
+                &:first-child > a,
+                &:first-child > span {
+                    border-bottom-left-radius: map-get($obj, "radius");
+                    border-top-left-radius: map-get($obj, "radius");
+                }
+                &:last-child > a,
+                &:last-child > span {
+                    border-bottom-right-radius: map-get($obj, "radius");
+                    border-top-right-radius: map-get($obj, "radius");
+                }
+            }
+        }
+    }
+}
+
+.pager {
+    padding-left: 0;
+    margin: 20px 0;
+    list-style: none;
+    text-align: center;
+    li {
+        display: inline;
+
+        > a,
+        span {
+            display: inline-block;
+            padding: 6px 15px;
+            background-color: #ffffff;
+            border: 1px solid #e0e0e0;
+            border-radius: 2px;
+        }
+
+        > a:hover,
+        > a:focus {
+            text-decoration: none;
+            background-color: #cfd8dc;
+        }
+    }
+
+    .next{
+        > a,
+        > span {
+            float: right;
+        }
+    }
+
+    .previous {
+        > a,
+        > span {
+            float: left;
+        }
+    }
+
+    .disabled {
+        > a,
+        > a:hover,
+        > a:focus,
+        > span {
+            color: #90a4ae;
+            background-color: #ffffff;
+            cursor: not-allowed;
+        }
+    }
+}

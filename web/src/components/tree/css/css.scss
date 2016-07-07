@@ -1,0 +1,160 @@
+.jstree .jstree-node {
+    white-space: nowrap;
+    min-height: 24px;
+    line-height: 24px;
+    margin-left: 24px;
+    min-width: 24px;
+    background-position: -292px -4px;
+    background-repeat: repeat-y;
+}
+.jstree-node, .jstree-children, .jstree-container-ul {
+    display: block;
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    list-style-image: none;
+}
+.jstree-wholerow-ul {
+    position: relative;
+    display: inline-block;
+    min-width: 100%;
+}
+.jstree > .jstree-container-ul > .jstree-node {
+    margin-left: 0;
+    margin-right: 0;
+}
+.jstree .jstree-wholerow {
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    height: 24px;
+    display: none;
+}
+.jstree-ocl {
+    cursor: pointer;
+}
+.jstree .jstree-node, .jstree .jstree-icon {
+    background-repeat: no-repeat;
+    background-color: transparent;
+    background-image: url("32px.png");
+}
+.jstree > .jstree-container-ul li > .jstree-ocl {
+    background-position: -36px -4px;
+}
+.jstree-anchor {
+    display: inline-block;
+    color: black;
+    white-space: nowrap;
+    padding: 0 4px 0 1px;
+    margin: 0;
+    vertical-align: top;
+}
+.jstree .jstree-anchor {
+    line-height: 24px;
+    height: 24px;
+}
+.jstree .jstree-anchor > .jstree-undetermined {
+    background-position: -196px -4px;
+}
+.jstree-icon:empty {
+    display: inline-block;
+    text-decoration: none;
+    margin: 0;
+    padding: 0;
+    vertical-align: top;
+    text-align: center;
+}
+.jstree-anchor > .jstree-themeicon {
+    margin-right: 2px;
+}
+.jstree .jstree-themeicon-custom {
+    background-color: transparent;
+    background-image: none;
+    background-position: 0 0;
+}
+.jstree .jstree-checkbox {
+    background-position: -164px -4px;
+}
+.jstree .jstree-icon:empty {
+    width: 24px;
+    height: 24px;
+    line-height: 24px;
+}
+.jstree .jstree-wholerow-clicked {
+    background: #e0e0e0 !important;
+}
+.jstree-wholerow-ul .jstree-wholerow {
+    width: 100%;
+    cursor: pointer;
+    position: absolute;
+    left: 0;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    display: block;
+}
+.jstree .jstree-anchor, .jstree .jstree-wholerow {
+    transition: background-color 0.15s, box-shadow 0.15s;
+}
+.jstree-wholerow-ul .jstree-anchor, .jstree-wholerow-ul .jstree-icon {
+    position: relative;
+}
+.jstree-anchor, .jstree-anchor:link, .jstree-anchor:visited, .jstree-anchor:hover, .jstree-anchor:active {
+    text-decoration: none;
+    color: inherit;
+}
+.jstree .jstree-clicked {
+    background: #e0e0e0 ;
+    border-radius: 1px !important;
+    box-shadow: none !important;
+}
+.jstree > .jstree-container-ul .jstree-node, .jstree > .jstree-container-ul .jstree-leaf > .jstree-ocl {
+    background: transparent;
+}
+.jstree .jstree-clicked > .jstree-checkbox {
+    background-position: -228px -4px;
+}
+.jstree .jstree-wholerow-hovered {
+    background: #eeeeee !important;
+}
+.jstree .jstree-hovered {
+    background: #eeeeee !important;
+    border-radius: 1px !important;
+    box-shadow: none !important;
+}
+.jstree .jstree-checkbox:hover {
+  background-position: -164px -36px;
+}
+.jstree .jstree-clicked > .jstree-checkbox:hover {
+  background-position: -228px -36px;
+}
+.jstree .jstree-anchor > .jstree-undetermined:hover {
+  background-position: -196px -36px;
+}
+.jstree .jstree-disabled {
+  background: transparent;
+  color: #666;
+}
+.jstree .jstree-disabled.jstree-hovered {
+  background: transparent;
+  box-shadow: none;
+}
+.jstree .jstree-disabled > .jstree-icon {
+  opacity: 0.8;
+  filter: url("data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\'><filter id=\'jstree-grayscale\'><feColorMatrix type=\'matrix\' values=\'0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0 0 0 1 0\'/></filter></svg>#jstree-grayscale");
+  /* Firefox 10+ */
+  filter: gray;
+  /* IE6-9 */
+  -webkit-filter: grayscale(100%);
+  /* Chrome 19+ & Safari 6+ */
+}
+.jstree .jstree-disabled {
+  background: transparent;
+}
+.jstree .jstree-disabled.jstree-hovered {
+  background: transparent;
+}
+.jstree .jstree-node.jstree-closed > .jstree-icon {
+    background-position: -4px -4px;
+}

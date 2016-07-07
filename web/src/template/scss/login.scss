@@ -1,0 +1,14 @@
+body {
+    color: #5e5e5e;
+    background-color: #edecec;
+}
+body:before {
+    height: 50%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: #00bcd4;
+    content: "";
+    z-index: 0;
+}

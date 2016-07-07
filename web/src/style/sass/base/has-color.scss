@@ -1,0 +1,135 @@
+$has-data: (
+    success: (
+        color: #558b2f,
+        border-color: #558b2f,
+        background-color: #f1f8e9,
+        focus: (
+            border-color: #3e6522,
+            box-shadow-color: #86c759
+        ),
+        form-group: (
+            background-color: ffffff,
+            placeholder: (
+                color: #bcdc97
+            ),
+            focus: (
+                background-color: #fff
+            ),
+            input-group-addon: (
+                background-color: #e1efd0
+            )
+        )
+    ),
+    warning: (
+        color: #f9a825,
+        border-color: #f9a825,
+        background-color: #fffde7,
+        focus: (
+            border-color: #950f0d,
+            box-shadow-color: #fcd088
+        ),
+        form-group: (
+            background-color: #ffffff,
+            placeholder: (
+                color: #fff5a1
+            ),
+            focus: (
+                background-color: #fff
+            ),
+            input-group-addon: (
+                background-color: #fffdee
+            )
+        )
+    ),
+    error: (
+        color: #c41411,
+        border-color: #c41411,
+        background-color: #fde0dc,
+        focus: (
+            border-color: #950f0d,
+            box-shadow-color: #ef4e4c
+        ),
+        form-group: (
+            background-color: #fad8d9,
+            placeholder: (
+                color: #ef787c
+            ),
+            focus: (
+                background-color: #fff
+            ),
+            input-group-addon: (
+                background-color: #f7bcbe
+            )
+        )
+    )
+);
+
+@each $key,$obj in $has-data {
+
+    $focus: map-get($obj, "focus");
+
+    .has-#{$key} {
+        .help-block,
+        .control-label,
+        .radio,
+        .checkbox,
+        .radio-inline,
+        .checkbox-inline,
+        &.radio label,
+        &.checkbox label,
+        &.radio-inline label,
+        &.checkbox-inline label {
+            color: map-get($obj, "color");
+        }
+        .form-control {
+            border-color: map-get($obj, "border-color");
+            -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+            box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+        }
+        .form-control:focus {
+            border-color: map-get($focus, "border-color");
+            -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 6px map-get($focus, "box-shadow-color");
+            box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 6px map-get($focus, "box-shadow-color");
+        }
+        .input-group-addon {
+            color: map-get($obj, "color");
+            border-color: map-get($obj, "border-color");
+            background-color: map-get($obj, "background-color");
+        }
+        .form-control-feedback {
+            color: map-get($obj, "color");
+        }
+
+        .input-icon i,
+        .input-icon .icon {
+            color: map-get($obj, "color");
+        }
+    }
+
+    $form-group: map-get($obj, "form-group");
+    $form-group-placeholder: map-get($form-group, "placeholder");
+    $form-group-focus: map-get($form-group, "focus");
+    $form-group-input-group-addon: map-get($form-group, "input-group-addon");
+
+    .form-group.has-#{$key} {
+        .form-control {
+            background-color: map-get($form-group, "background-color");
+        }
+        .form-control::-moz-placeholder {
+            color: map-get($form-group-placeholder, "color");
+            opacity: 1;
+        }
+        .form-control:-ms-input-placeholder {
+            color: map-get($form-group-placeholder, "color");
+        }
+        .form-control::-webkit-input-placeholder {
+            color: map-get($form-group-placeholder, "color");
+        }
+        .form-control:focus {
+            background-color: map-get($form-group-focus, "background-color");
+        }
+        .input-group-addon {
+            background-color: map-get($form-group-input-group-addon, "background-color") !important;
+        }
+    }
+}

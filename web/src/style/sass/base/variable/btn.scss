@@ -1,0 +1,592 @@
+$btn-box-shadow: 0px 1px 0px 0px rgba(0, 0, 0, 0.04);
+$btn-border: 1px solid transparent;
+$btn-padding: 5px 10px;
+$btn-font-size: 13px;
+$btn-line-height: 1.54;
+$btn-border-radius: 2px;
+
+$btn-link-color:#03a9f4;
+$btn-link-hover-color:#03a9f4;
+$btn-link-disabled-color:#90a4ae;
+
+$btn-styles:(
+    default: (
+        color: #455a64,
+        background-color: #fafafa,
+        border-color: #e0e0e0,
+        disabled: (
+            background-color: #fafafa,
+            border-color: #e0e0e0
+        ),
+        hover: (
+            color: #455a64,
+            background-color: #ededed,
+            border-color: #cccccc
+        ),
+        focus: (
+            color: #455a64,
+            background-color: #e6e6e6,
+            border-color: #c7c7c7
+        ),
+        badge: (
+            color: #fafafa,
+            background-color: #455a64
+        )
+    ),
+    primary: (
+        color: #ffffff,
+        background-color: #03a9f4,
+        border-color: #039be5,
+        disabled: (
+            background-color: #03a9f4,
+            border-color: #039be5
+        ),
+        hover: (
+            color: #ffffff,
+            background-color: #0398db,
+            border-color: #0280bd
+        ),
+        focus: (
+            color: #ffffff,
+            background-color: #038dcc,
+            border-color: #0279b3
+        ),
+        badge: (
+            color: #03a9f4,
+            background-color: #ffffff
+        )
+    ),
+    success: (
+        color: #ffffff,
+        background-color: #8bc34a,
+        border-color: #7cb342,
+        disabled: (
+            background-color: #8bc34a,
+            border-color: #7cb342,
+        ),
+        hover: (
+            color: #ffffff,
+            background-color: #7eb73d,
+            border-color: #679537
+        ),
+        focus: (
+            color: #ffffff,
+            background-color: #76ab39,
+            border-color: #628e34
+        ),
+        badge: (
+            color: #8bc34a,
+            background-color: #ffffff
+        )
+    ),
+    info: (
+        color: #ffffff,
+        background-color: #00bcd4,
+        border-color: #00acc1,
+        disabled: (
+            background-color: #00bcd4,
+            border-color: #00acc1
+        ),
+        hover: (
+            color: #ffffff,
+            background-color: #00a5bb,
+            border-color: #008898
+        ),
+        focus: (
+            color: #ffffff,
+            background-color: #0098ab,
+            border-color: #007f8e
+        ),
+        badge: (
+            color: #00bcd4,
+            background-color: #ffffff
+        )
+    ),
+    warning: (
+        color: #ffffff,
+        background-color: #ffeb3b,
+        border-color: #fdd835,
+        disabled: (
+            background-color: #ffeb3b,
+            border-color: #fdd835
+        ),
+        hover: (
+            color: #ffffff,
+            background-color: #ffe821,
+            border-color: #fdd00d
+        ),
+        focus: (
+            color: #ffffff,
+            background-color: #ffe712,
+            border-color: #fdce02
+        ),
+        badge: (
+            color: #ffeb3b,
+            background-color: #ffffff
+        ),
+    ),
+    danger: (
+        color: #ffffff,
+        background-color: #e51c23,
+        border-color: #dd191d,
+        disabled: (
+            background-color: #e51c23,
+            border-color: #dd191d
+        ),
+        hover: (
+            color: #ffffff,
+            background-color: #d0181e,
+            border-color: #b81518
+        ),
+        focus: (
+            color: #ffffff,
+            background-color: #c2161c,
+            border-color: #af1417
+        ),
+        badge: (
+            color: #e51c23,
+            background-color: #ffffff
+        )
+    ),
+    inverse: (
+        color: #ffffff,
+        background-color: #9e9e9e,
+        border-color: #757575,
+        disabled: (
+            background-color: #9e9e9e,
+            border-color: #757575
+        ),
+        hover: (
+            color: #ffffff,
+            background-color: #919191,
+            border-color: #616161
+        ),
+        focus: (
+            color: #ffffff,
+            background-color: #8a8a8a,
+            border-color: #5b5b5b
+        ),
+        badge: (
+            color: #9e9e9e,
+            background-color: #ffffff
+        )
+    ),
+    brown: (
+        color: #ffffff,
+        background-color: #795548,
+        border-color: #6d4c41,
+        disabled: (
+            background-color: #795548,
+            border-color: #6d4c41
+        ),
+        hover: (
+            color: #ffffff,
+            background-color: #694a3e,
+            border-color: #533a32
+        ),
+        focus: (
+            color: #ffffff,
+            background-color: #5f4339,
+            border-color: #4d362e
+        ),
+        badge: (
+            color: #795548,
+            background-color: #ffffff
+        )
+    ),
+    indigo: (
+        color: #ffffff,
+        background-color: #3f51b5,
+        border-color: #3949ab,
+        disabled: (
+            background-color: #3f51b5,
+            border-color: #3949ab
+        ),
+        hover: (
+            color: #ffffff,
+            background-color: #3849a2,
+            border-color: #2f3c8c
+        ),
+        focus: (
+            color: #ffffff,
+            background-color: #344397,
+            border-color: #2c3985
+        ),
+        badge: (
+            color: #3f51b5,
+            background-color: #ffffff
+        )
+    ),
+    orange: (
+        color: #ffffff,
+        background-color: #ff9800,
+        border-color: #fb8c00,
+        disabled: (
+            background-color: #ff9800,
+            border-color: #fb8c00
+        ),
+        hover: (
+            color: #ffffff,
+            background-color: #e68900,
+            border-color: #d27500
+        ),
+        focus: (
+            color: #ffffff,
+            background-color: #d68000,
+            border-color: #c87000
+        ),
+        badge: (
+            color: #ff9800,
+            background-color: #ffffff
+        )
+    ),
+    teal: (
+        color: #ffffff,
+        background-color: #009688,
+        border-color: #00897b,
+        disabled:(
+            background-color: #009688,
+            border-color: #00897b
+        ),
+        hover:(
+            color: #ffffff,
+            background-color: #007d71,
+            border-color: #006056
+        ),
+        focus:(
+            color: #ffffff,
+            background-color: #006d63,
+            border-color: #00564d
+        ),
+        badge:(
+            color: #009688,
+            background-color: #ffffff
+        )
+    ),
+    midnightblue: (
+        color: #ffffff,
+        background-color: #37474f,
+        border-color: #263238,
+        disabled: (
+            background-color: #37474f,
+            border-color: #263238
+        ),
+        hover: (
+            color: #ffffff,
+            background-color: #2d3940,
+            border-color: #161c20
+        ),
+        focus: (
+            color: #ffffff,
+            background-color: #263137,
+            border-color: #11171a
+        ),
+        badge: (
+            color: #37474f,
+            background-color: #ffffff
+        )
+    ),
+    pink: (
+        color: #ffffff,
+        background-color: #e91e63,
+        border-color: #d81b60,
+        disabled: (
+            background-color: #e91e63,
+            border-color: #d81b60
+        ),
+        hover: (
+            color: #ffffff,
+            background-color: #d81557,
+            border-color: #b41650
+        ),
+        focus: (
+            color: #ffffff,
+            background-color: #ca1452,
+            border-color: #ab154c
+        ),
+        badge: (
+            color: #e91e63,
+            background-color: #ffffff
+        )
+    ),
+    green: (
+        color: #ffffff,
+        background-color: #4caf50,
+        border-color: #43a047,
+        disabled:(
+            background-color: #4caf50,
+            border-color: #43a047
+        ),
+        hover:(
+            color: #ffffff,
+            background-color: #449d48,
+            border-color: #37833a
+        ),
+        focus:(
+            color: #ffffff,
+            background-color: #409343,
+            border-color: #347c37
+        ),
+        badge:(
+            color: #4caf50,
+            background-color: #ffffff
+        )
+    ),
+    purple: (
+        color: #ffffff,
+        background-color: #9c27b0,
+        border-color: #8e24aa,
+        disabled: (
+            background-color: #9c27b0,
+            border-color: #8e24aa
+        ),
+        hover: (
+            color: #ffffff,
+            background-color: #89229b,
+            border-color: #721d88
+        ),
+        focus: (
+            color: #ffffff,
+            background-color: #7e208f,
+            border-color: #6b1b80
+        ),
+        badge: (
+            color: #9c27b0,
+            background-color: #ffffff
+        )
+    ),
+    deeporange: (
+        color: #ffffff,
+        background-color: #ff5722,
+        border-color: #f4511e,
+        disabled: (
+            background-color: #ff5722,
+            border-color: #f4511e
+        ),
+        hover: (
+            color: #ffffff,
+            background-color: #ff4408,
+            border-color: #de3d0b
+        ),
+        focus: (
+            color: #ffffff,
+            background-color: #f83c00,
+            border-color: #d53b0a
+        ),
+        badge: (
+            color: #ff5722,
+            background-color: #ffffff
+        )
+    )
+);
+
+$btn-alt-styles:(
+    default: (
+        color: #455a64,
+        border-color: #cfd8dc,
+        disabled: (
+            border-color: #d6d6d6,
+            color: #d6d6d6
+        ),
+        hover-focus: (
+            color: #263238,
+            border-color: #cfd8dc,
+            background-color: #cfd8dc
+        )
+    ),
+    primary: (
+        color: #03a9f4,
+        border-color: #039be5,
+        disabled: (
+            color: #03a9f4,
+            border-color: #039be5
+        ),
+        hover-focus: (
+            color: #ffffff,
+            background-color: #0398db,
+            border-color: #0280bd
+        )
+    ),
+    success: (
+        color: #8bc34a,
+        border-color: #7cb342,
+        disabled: (
+            color: #8bc34a,
+            border-color: #7cb342,
+        ),
+        hover-focus: (
+            color: #ffffff,
+            background-color: #7eb73d,
+            border-color: #679537
+        )
+    ),
+    info: (
+        color: #00bcd4,
+        border-color: #00acc1,
+        disabled: (
+            color: #00bcd4,
+            border-color: #00acc1
+        ),
+        hover-focus: (
+            color: #ffffff,
+            background-color: #00a5bb,
+            border-color: #008898
+        )
+    ),
+    warning: (
+        color: #ffeb3b,
+        border-color: #fdd835,
+        disabled: (
+            color: #ffeb3b,
+            border-color: #fdd835
+        ),
+        hover-focus: (
+            color: #ffffff,
+            background-color: #ffe821,
+            border-color: #fdd00d
+        )
+    ),
+    danger: (
+        color: #e51c23,
+        border-color: #dd191d,
+        disabled: (
+            color: #e51c23,
+            border-color: #dd191d
+        ),
+        hover-focus: (
+            color: #ffffff,
+            background-color: #d0181e,
+            border-color: #b81518
+        )
+    ),
+    inverse: (
+        color: #9e9e9e,
+        border-color: #757575,
+        disabled: (
+            color: #9e9e9e,
+            border-color: #757575
+        ),
+        hover-focus: (
+            color: #ffffff,
+            background-color: #919191,
+            border-color: #616161
+        )
+    ),
+    brown: (
+        color: #795548,
+        border-color: #6d4c41,
+        disabled: (
+            color: #795548,
+            border-color: #6d4c41
+        ),
+        hover-focus: (
+            color: #ffffff,
+            background-color: #694a3e,
+            border-color: #533a32
+        )
+    ),
+    indigo: (
+        color: #3f51b5,
+        border-color: #3949ab,
+        disabled: (
+            color: #3f51b5,
+            border-color: #3949ab
+        ),
+        hover-focus: (
+            color: #ffffff,
+            background-color: #3849a2,
+            border-color: #2f3c8c
+        )
+    ),
+    orange: (
+        color: #ff9800,
+        border-color: #fb8c00,
+        disabled: (
+            color: #ff9800,
+            border-color: #fb8c00
+        ),
+        hover-focus: (
+            color: #ffffff,
+            background-color: #e68900,
+            border-color: #d27500
+        )
+    ),
+    teal: (
+        color: #009688,
+        border-color: #00897b,
+        disabled:(
+            color: #009688,
+            border-color: #00897b
+        ),
+        hover-focus:(
+            color: #ffffff,
+            background-color: #007d71,
+            border-color: #006056
+        )
+    ),
+    midnightblue: (
+        color: #37474f,
+        border-color: #263238,
+        disabled: (
+            color: #37474f,
+            border-color: #263238
+        ),
+        hover-focus: (
+            color: #ffffff,
+            background-color: #2d3940,
+            border-color: #161c20
+        )
+    ),
+    pink: (
+        color: #e91e63,
+        border-color: #d81b60,
+        disabled: (
+            color: #e91e63,
+            border-color: #d81b60
+        ),
+        hover-focus: (
+            color: #ffffff,
+            background-color: #d81557,
+            border-color: #b41650
+        )
+    ),
+    green: (
+        color: #4caf50,
+        border-color: #43a047,
+        disabled:(
+            color: #4caf50,
+            border-color: #43a047
+        ),
+        hover-focus:(
+            color: #ffffff,
+            background-color: #449d48,
+            border-color: #37833a
+        )
+    ),
+    purple: (
+        color: #9c27b0,
+        border-color: #8e24aa,
+        disabled: (
+            color: #9c27b0,
+            border-color: #8e24aa
+        ),
+        hover-focus: (
+            color: #ffffff,
+            background-color: #89229b,
+            border-color: #721d88
+        )
+    ),
+    deeporange: (
+        color: #ff5722,
+        border-color: #f4511e,
+        disabled: (
+            color: #ff5722,
+            border-color: #f4511e
+        ),
+        hover-focus: (
+            color: #ffffff,
+            background-color: #ff4408,
+            border-color: #de3d0b
+        )
+    )
+);

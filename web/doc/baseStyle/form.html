@@ -1,0 +1,1106 @@
+<!DOCTYPE html>
+<html lang="zh-cmn-Hans">
+
+<head>
+	<title>通用style组件样式</title>
+	<meta charset="UTF-8">
+	<link href="css/style.css" rel="stylesheet">
+	<link href="fonts/font-awesome/css/font-awesome.css" rel="stylesheet">
+	<link href="css/index.css" rel="stylesheet">
+	<link href="css/prettify.css" rel="stylesheet">
+</head>
+
+<body>
+	<div class="index-banner">
+		<div class="index-container pl20 pr20">
+      <h1>Web Component</h1>
+      <p>Compatible with most browsers</p>
+		</div>
+	</div>
+	<div class="index-container row pt30 pb50">
+		<div class="col-md-3">
+			<ul class="index-nav">
+				<li class="index-nav-header">Base组件</li>
+				<li><a href="./breadcrumbs.html">Breadcrumbs<span class="index-nav-en">breadcrumbs</span></a></li>
+				<li><a href="./btn.html">Button<span class="index-nav-en">btn</span></a></li>
+				<li><a href="./fontIco.html">FontIco<span class="index-nav-en">ico</span></a></li>
+				<li><a href="./form.html">Form<span class="index-nav-en">form</span></a></li>
+				<li><a href="./Grid.html">Grid<span class="index-nav-en">grid</span></a></li>
+				<li><a href="./image.html">Image<span class="index-nav-en">image</span></a></li>
+				<li><a href="./labels.html">Labels<span class="index-nav-en">labels</span></a></li>
+				<li><a href="./page.html">Page<span class="index-nav-en">page</span></a></li>
+				<li><a href="./panel.html">Panel<span class="index-nav-en">panel</span></a></li>
+				<li><a href="./table.html">Table<span class="index-nav-en">table</span></a></li>
+				<li><a href="./tabs.html">Tab<span class="index-nav-en">tab</span></a></li>
+				<li><a href="./typography.html">Typography<span class="index-nav-en">typography</span></a></li>
+				<li><a href="./wells.html">Wells<span class="index-nav-en">wells</span></a></li>
+			</ul>
+		</div>
+		<div class="col-md-9">
+			<div class="panel panel-midnightblue">
+				<div class="panel-heading">
+					<h2>Vertical Form</h2>
+
+				</div>
+				<div class="panel-body">
+					<form>
+						<div class="form-group">
+							<label for="focusedinput" class="control-label">Focused Input</label>
+							<input type="text" class="form-control" id="focusedinput" placeholder="Default Input">
+						</div>
+						<div class="form-group">
+							<label for="disabledinput" class="control-label">Disabled Input</label>
+							<input disabled="" type="text" class="form-control" id="disabledinput" placeholder="Disabled Input">
+						</div>
+						<div class="form-group">
+							<label for="inputPassword" class="control-label">Password</label>
+							<input type="password" class="form-control" id="inputPassword" placeholder="Password">
+						</div>
+						<div class="form-group">
+							<label for="checkbox" class="control-label">Checkbox</label>
+							<div class="checkbox block"><label><input type="checkbox"> Unchecked</label></div>
+							<div class="checkbox block"><label><input type="checkbox" checked=""> Checked</label></div>
+							<div class="checkbox block"><label><input type="checkbox" disabled=""> Disabled Unchecked</label></div>
+							<div class="checkbox block"><label><input type="checkbox" disabled="" checked=""> Disabled Checked</label></div>
+						</div>
+						<div class="form-group">
+							<label for="selector1" class="control-label">Dropdown Select</label>
+							<select name="selector1" id="selector1" class="form-control">
+								<option>Lorem ipsum dolor sit amet.</option>
+								<option>Dolore, ab unde modi est!</option>
+								<option>Illum, fuga minus sit eaque.</option>
+								<option>Consequatur ducimus maiores voluptatum minima.</option>
+							</select>
+						</div>
+						<div class="form-group">
+							<label class="control-label">Multiple Select</label>
+							<select multiple="" class="form-control">
+								<option>Option 1</option>
+								<option>Option 2</option>
+								<option>Option 3</option>
+								<option>Option 4</option>
+								<option>Option 5</option>
+							</select>
+						</div>
+						<div class="form-group">
+							<label for="txtarea1" class="control-label">Textarea</label>
+							<textarea name="txtarea1" id="txtarea1" cols="50" rows="4" class="form-control"></textarea>
+						</div>
+						<div class="form-group">
+							<label for="radio" class="control-label">Radio</label>
+							<div class="radio block"><label><input type="radio"> Unchecked</label></div>
+							<div class="radio block"><label><input type="radio" checked=""> Checked</label></div>
+							<div class="radio block"><label><input type="radio" disabled=""> Disabled Unchecked</label></div>
+							<div class="radio block"><label><input type="radio" disabled="" checked=""> Disabled Checked</label></div>
+						</div>
+						<div class="form-group">
+							<label for="smallinput" class="control-label label-input-sm">Small Input</label>
+							<input type="text" class="form-control input-sm" id="smallinput" placeholder="Small Input">
+						</div>
+						<div class="form-group">
+							<label for="mediuminput" class="control-label">Medium Input</label>
+							<input type="text" class="form-control" id="mediuminput" placeholder="Medium Input">
+						</div>
+						<div class="form-group">
+							<label for="largeinput" class="control-label label-input-lg">Large Input</label>
+							<input type="text" class="form-control input-lg" id="largeinput" placeholder="Large Input">
+						</div>
+					</form>
+
+					<div class="panel-footer">
+						<div class="row">
+							<div class="col-sm-8 col-sm-offset-2">
+								<button class="btn-primary btn">Submit</button>
+								<button class="btn-default btn">Cancel</button>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<hr>
+			<div class="panel panel-midnightblue">
+				<div class="panel-heading">
+					<h2>Horizontal Form</h2>
+
+				</div>
+				<div class="panel-body">
+					<form class="form-horizontal">
+						<div class="form-group">
+							<label for="focusedinput" class="col-sm-2 control-label">Focused Input</label>
+							<div class="col-sm-8">
+								<input type="text" class="form-control" id="focusedinput" placeholder="Default Input">
+							</div>
+							<div class="col-sm-2">
+								<p class="help-block">Your help text!</p>
+							</div>
+						</div>
+						<div class="form-group">
+							<label for="disabledinput" class="col-sm-2 control-label">Disabled Input</label>
+							<div class="col-sm-8">
+								<input disabled="" type="text" class="form-control" id="disabledinput" placeholder="Disabled Input">
+							</div>
+						</div>
+						<div class="form-group">
+							<label for="inputPassword" class="col-sm-2 control-label">Password</label>
+							<div class="col-sm-8">
+								<input type="password" class="form-control" id="inputPassword" placeholder="Password">
+							</div>
+						</div>
+						<div class="form-group">
+							<label for="checkbox" class="col-sm-2 control-label">Checkbox</label>
+							<div class="col-sm-8">
+								<div class="checkbox block"><label><input type="checkbox"> Unchecked</label></div>
+								<div class="checkbox block"><label><input type="checkbox" checked=""> Checked</label></div>
+								<div class="checkbox block"><label><input type="checkbox" disabled=""> Disabled Unchecked</label></div>
+								<div class="checkbox block"><label><input type="checkbox" disabled="" checked=""> Disabled Checked</label></div>
+							</div>
+						</div>
+						<div class="form-group">
+							<label for="checkbox" class="col-sm-2 control-label">Checkbox Inline</label>
+							<div class="col-sm-8">
+								<div class="checkbox-inline"><label><input type="checkbox"> Unchecked</label></div>
+								<div class="checkbox-inline"><label><input type="checkbox" checked=""> Checked</label></div>
+								<div class="checkbox-inline"><label><input type="checkbox" disabled=""> Disabled Unchecked</label></div>
+								<div class="checkbox-inline"><label><input type="checkbox" disabled="" checked=""> Disabled Checked</label></div>
+							</div>
+						</div>
+						<div class="form-group">
+							<label for="selector1" class="col-sm-2 control-label">Dropdown Select</label>
+							<div class="col-sm-8"><select name="selector1" id="selector1" class="form-control">
+									<option>Lorem ipsum dolor sit amet.</option>
+									<option>Dolore, ab unde modi est!</option>
+									<option>Illum, fuga minus sit eaque.</option>
+									<option>Consequatur ducimus maiores voluptatum minima.</option>
+								</select></div>
+						</div>
+						<div class="form-group">
+							<label class="col-sm-2 control-label">Multiple Select</label>
+							<div class="col-sm-8">
+								<select multiple="" class="form-control">
+										<option>Option 1</option>
+										<option>Option 2</option>
+										<option>Option 3</option>
+										<option>Option 4</option>
+										<option>Option 5</option>
+									</select>
+							</div>
+						</div>
+						<div class="form-group">
+							<label for="txtarea1" class="col-sm-2 control-label">Textarea</label>
+							<div class="col-sm-8"><textarea name="txtarea1" id="txtarea1" cols="50" rows="4" class="form-control"></textarea></div>
+						</div>
+						<div class="form-group">
+							<label for="radio" class="col-sm-2 control-label">Radio</label>
+							<div class="col-sm-8">
+								<div class="radio block"><label><input type="radio"> Unchecked</label></div>
+								<div class="radio block"><label><input type="radio" checked=""> Checked</label></div>
+								<div class="radio block"><label><input type="radio" disabled=""> Disabled Unchecked</label></div>
+								<div class="radio block"><label><input type="radio" disabled="" checked=""> Disabled Checked</label></div>
+							</div>
+						</div>
+						<div class="form-group">
+							<label for="radio" class="col-sm-2 control-label">Radio Inline</label>
+							<div class="col-sm-8">
+								<div class="radio-inline"><label><input type="radio"> Unchecked</label></div>
+								<div class="radio-inline"><label><input type="radio" checked=""> Checked</label></div>
+								<div class="radio-inline"><label><input type="radio" disabled=""> Disabled Unchecked</label></div>
+								<div class="radio-inline"><label><input type="radio" disabled="" checked=""> Disabled Checked</label></div>
+							</div>
+						</div>
+						<div class="form-group">
+							<label for="smallinput" class="col-sm-2 control-label label-input-sm">Small Input</label>
+							<div class="col-sm-8">
+								<input type="text" class="form-control input-sm" id="smallinput" placeholder="Small Input">
+							</div>
+						</div>
+						<div class="form-group">
+							<label for="mediuminput" class="col-sm-2 control-label">Medium Input</label>
+							<div class="col-sm-8">
+								<input type="text" class="form-control" id="mediuminput" placeholder="Medium Input">
+							</div>
+						</div>
+						<div class="form-group">
+							<label for="largeinput" class="col-sm-2 control-label label-input-lg">Large Input</label>
+							<div class="col-sm-8">
+								<input type="text" class="form-control input-lg" id="largeinput" placeholder="Large Input">
+							</div>
+						</div>
+					</form>
+
+					<div class="panel-footer">
+						<div class="row">
+							<div class="col-sm-8 col-sm-offset-2">
+								<button class="btn-primary btn">Submit</button>
+								<button class="btn-default btn">Cancel</button>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<hr>
+			<div class="panel panel-midnightblue">
+				<div class="panel-heading">
+					<h2>Bordered Row</h2>
+
+				</div>
+				<div class="panel-body">
+					<form class="form-horizontal row-border">
+						<div class="form-group">
+							<label for="focusedinput" class="col-sm-2 control-label">Focused Input</label>
+							<div class="col-sm-8">
+								<input type="text" class="form-control" id="focusedinput" placeholder="Default Input">
+							</div>
+							<div class="col-sm-2">
+								<p class="help-block">Your help text!</p>
+							</div>
+						</div>
+						<div class="form-group">
+							<label for="disabledinput" class="col-sm-2 control-label">Disabled Input</label>
+							<div class="col-sm-8">
+								<input disabled="" type="text" class="form-control" id="disabledinput" placeholder="Disabled Input">
+							</div>
+						</div>
+						<div class="form-group">
+							<label for="inputPassword" class="col-sm-2 control-label">Password</label>
+							<div class="col-sm-8">
+								<input type="password" class="form-control" id="inputPassword" placeholder="Password">
+							</div>
+						</div>
+						<div class="form-group">
+							<label for="checkbox" class="col-sm-2 control-label">Checkbox</label>
+							<div class="col-sm-8">
+								<div class="checkbox block"><label><input type="checkbox"> Unchecked</label></div>
+								<div class="checkbox block"><label><input type="checkbox" checked=""> Checked</label></div>
+								<div class="checkbox block"><label><input type="checkbox" disabled=""> Disabled Unchecked</label></div>
+								<div class="checkbox block"><label><input type="checkbox" disabled="" checked=""> Disabled Checked</label></div>
+							</div>
+						</div>
+						<div class="form-group">
+							<label for="checkbox" class="col-sm-2 control-label">Checkbox Inline</label>
+							<div class="col-sm-8">
+								<div class="checkbox-inline"><label><input type="checkbox"> Unchecked</label></div>
+								<div class="checkbox-inline"><label><input type="checkbox" checked=""> Checked</label></div>
+								<div class="checkbox-inline"><label><input type="checkbox" disabled=""> Disabled Unchecked</label></div>
+								<div class="checkbox-inline"><label><input type="checkbox" disabled="" checked=""> Disabled Checked</label></div>
+							</div>
+						</div>
+						<div class="form-group">
+							<label for="selector1" class="col-sm-2 control-label">Dropdown Select</label>
+							<div class="col-sm-8"><select name="selector1" id="selector1" class="form-control">
+									<option>Lorem ipsum dolor sit amet.</option>
+									<option>Dolore, ab unde modi est!</option>
+									<option>Illum, fuga minus sit eaque.</option>
+									<option>Consequatur ducimus maiores voluptatum minima.</option>
+								</select></div>
+						</div>
+						<div class="form-group">
+							<label class="col-sm-2 control-label">Multiple Select</label>
+							<div class="col-sm-8">
+								<select multiple="" class="form-control">
+										<option>Option 1</option>
+										<option>Option 2</option>
+										<option>Option 3</option>
+										<option>Option 4</option>
+										<option>Option 5</option>
+									</select>
+							</div>
+						</div>
+						<div class="form-group">
+							<label for="txtarea1" class="col-sm-2 control-label">Textarea</label>
+							<div class="col-sm-8"><textarea name="txtarea1" id="txtarea1" cols="50" rows="4" class="form-control"></textarea></div>
+						</div>
+						<div class="form-group">
+							<label for="radio" class="col-sm-2 control-label">Radio</label>
+							<div class="col-sm-8">
+								<div class="radio block"><label><input type="radio"> Unchecked</label></div>
+								<div class="radio block"><label><input type="radio" checked=""> Checked</label></div>
+								<div class="radio block"><label><input type="radio" disabled=""> Disabled Unchecked</label></div>
+								<div class="radio block"><label><input type="radio" disabled="" checked=""> Disabled Checked</label></div>
+							</div>
+						</div>
+						<div class="form-group">
+							<label for="radio" class="col-sm-2 control-label">Radio Inline</label>
+							<div class="col-sm-8">
+								<div class="radio-inline"><label><input type="radio"> Unchecked</label></div>
+								<div class="radio-inline"><label><input type="radio" checked=""> Checked</label></div>
+								<div class="radio-inline"><label><input type="radio" disabled=""> Disabled Unchecked</label></div>
+								<div class="radio-inline"><label><input type="radio" disabled="" checked=""> Disabled Checked</label></div>
+							</div>
+						</div>
+						<div class="form-group">
+							<label for="smallinput" class="col-sm-2 control-label label-input-sm">Small Input</label>
+							<div class="col-sm-8">
+								<input type="text" class="form-control input-sm" id="smallinput" placeholder="Small Input">
+							</div>
+						</div>
+						<div class="form-group">
+							<label for="mediuminput" class="col-sm-2 control-label">Medium Input</label>
+							<div class="col-sm-8">
+								<input type="text" class="form-control" id="mediuminput" placeholder="Medium Input">
+							</div>
+						</div>
+						<div class="form-group">
+							<label for="largeinput" class="col-sm-2 control-label label-input-lg">Large Input</label>
+							<div class="col-sm-8">
+								<input type="text" class="form-control input-lg" id="largeinput" placeholder="Large Input">
+							</div>
+						</div>
+					</form>
+
+					<div class="panel-footer">
+						<div class="row">
+							<div class="col-sm-8 col-sm-offset-2">
+								<button class="btn-primary btn">Submit</button>
+								<button class="btn-default btn">Cancel</button>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<hr>
+			<div class="panel panel-midnightblue">
+				<div class="panel-heading">
+					<h2>Tabular Form</h2>
+
+				</div>
+				<div class="panel-body">
+					<form class="form-horizontal tabular-form">
+						<div class="form-group">
+							<label for="focusedinput" class="col-sm-2 control-label">Focused Input</label>
+							<div class="col-sm-8 tabular-border">
+								<input type="text" class="form-control" id="focusedinput" placeholder="Default Input">
+							</div>
+							<div class="col-sm-2">
+								<p class="help-block">Your help text!</p>
+							</div>
+						</div>
+						<div class="form-group">
+							<label for="disabledinput" class="col-sm-2 control-label">Disabled Input</label>
+							<div class="col-sm-8 tabular-border">
+								<input disabled="" type="text" class="form-control" id="disabledinput" placeholder="Disabled Input">
+							</div>
+						</div>
+						<div class="form-group">
+							<label for="inputPassword" class="col-sm-2 control-label">Password</label>
+							<div class="col-sm-8 tabular-border">
+								<input type="password" class="form-control" id="inputPassword" placeholder="Password">
+							</div>
+						</div>
+						<div class="form-group">
+							<label for="checkbox" class="col-sm-2 control-label">Checkbox</label>
+							<div class="col-sm-8 tabular-border">
+								<div class="checkbox block"><label><input type="checkbox"> Unchecked</label></div>
+								<div class="checkbox block"><label><input type="checkbox" checked=""> Checked</label></div>
+								<div class="checkbox block"><label><input type="checkbox" disabled=""> Disabled Unchecked</label></div>
+								<div class="checkbox block"><label><input type="checkbox" disabled="" checked=""> Disabled Checked</label></div>
+							</div>
+						</div>
+						<div class="form-group">
+							<label for="checkbox" class="col-sm-2 control-label">Checkbox Inline</label>
+							<div class="col-sm-8 tabular-border">
+								<div class="checkbox-inline"><label><input type="checkbox"> Unchecked</label></div>
+								<div class="checkbox-inline"><label><input type="checkbox" checked=""> Checked</label></div>
+								<div class="checkbox-inline"><label><input type="checkbox" disabled=""> Disabled Unchecked</label></div>
+								<div class="checkbox-inline"><label><input type="checkbox" disabled="" checked=""> Disabled Checked</label></div>
+							</div>
+						</div>
+						<div class="form-group">
+							<label for="selector1" class="col-sm-2 control-label">Dropdown Select</label>
+							<div class="col-sm-8 tabular-border"><select name="selector1" id="selector1" class="form-control">
+									<option>Lorem ipsum dolor sit amet.</option>
+									<option>Dolore, ab unde modi est!</option>
+									<option>Illum, fuga minus sit eaque.</option>
+									<option>Consequatur ducimus maiores voluptatum minima.</option>
+								</select></div>
+						</div>
+						<div class="form-group">
+							<label class="col-sm-2 control-label">Multiple Select</label>
+							<div class="col-sm-8 tabular-border">
+								<select multiple="" class="form-control">
+										<option>Option 1</option>
+										<option>Option 2</option>
+										<option>Option 3</option>
+										<option>Option 4</option>
+										<option>Option 5</option>
+									</select>
+							</div>
+						</div>
+						<div class="form-group">
+							<label for="txtarea1" class="col-sm-2 control-label">Textarea</label>
+							<div class="col-sm-8 tabular-border"><textarea name="txtarea1" id="txtarea1" cols="50" rows="4" class="form-control"></textarea></div>
+						</div>
+						<div class="form-group">
+							<label for="radio" class="col-sm-2 control-label">Radio</label>
+							<div class="col-sm-8 tabular-border">
+								<div class="radio block"><label><input type="radio"> Unchecked</label></div>
+								<div class="radio block"><label><input type="radio" checked=""> Checked</label></div>
+								<div class="radio block"><label><input type="radio" disabled=""> Disabled Unchecked</label></div>
+								<div class="radio block"><label><input type="radio" disabled="" checked=""> Disabled Checked</label></div>
+							</div>
+						</div>
+						<div class="form-group">
+							<label for="radio" class="col-sm-2 control-label">Radio Inline</label>
+							<div class="col-sm-8 tabular-border">
+								<div class="radio-inline"><label><input type="radio"> Unchecked</label></div>
+								<div class="radio-inline"><label><input type="radio" checked=""> Checked</label></div>
+								<div class="radio-inline"><label><input type="radio" disabled=""> Disabled Unchecked</label></div>
+								<div class="radio-inline"><label><input type="radio" disabled="" checked=""> Disabled Checked</label></div>
+							</div>
+						</div>
+						<div class="form-group">
+							<label for="smallinput" class="col-sm-2 control-label label-input-sm">Small Input</label>
+							<div class="col-sm-8 tabular-border">
+								<input type="text" class="form-control input-sm" id="smallinput" placeholder="Small Input">
+							</div>
+						</div>
+						<div class="form-group">
+							<label for="mediuminput" class="col-sm-2 control-label">Medium Input</label>
+							<div class="col-sm-8 tabular-border">
+								<input type="text" class="form-control" id="mediuminput" placeholder="Medium Input">
+							</div>
+						</div>
+						<div class="form-group">
+							<label for="largeinput" class="col-sm-2 control-label label-input-lg">Large Input</label>
+							<div class="col-sm-8 tabular-border">
+								<input type="text" class="form-control input-lg" id="largeinput" placeholder="Large Input">
+							</div>
+						</div>
+					</form>
+
+					<div class="panel-footer">
+						<div class="row">
+							<div class="col-sm-8 col-sm-offset-2">
+								<button class="btn-primary btn">Submit</button>
+								<button class="btn-default btn">Cancel</button>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<hr>
+			<div class="panel panel-default">
+				<div class="panel-heading">
+					<h2>Form Layout</h2>
+				</div>
+				<div class="panel-body">
+					<h3 class="mt0">Input Addons and Icons</h3>
+					<p class="mb20">Input addons with icons and validation states</p>
+					<form role="form" class="form-horizontal">
+						<div class="form-group">
+							<label class="col-md-2 control-label">Email Address</label>
+							<div class="col-md-8">
+								<div class="input-group">
+									<span class="input-group-addon">
+									<i class="fa fa-envelope-o"></i>
+								</span>
+									<input type="text" class="form-control" placeholder="Email Address">
+								</div>
+							</div>
+						</div>
+						<div class="form-group">
+							<label class="col-md-2 control-label">Password</label>
+							<div class="col-md-8">
+								<div class="input-group">
+									<span class="input-group-addon">
+									<i class="fa fa-key"></i>
+								</span>
+									<input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+								</div>
+							</div>
+						</div>
+						<div class="form-group">
+							<label class="col-md-2 control-label">Email Address</label>
+							<div class="col-md-8">
+								<div class="input-group input-icon right">
+									<span class="input-group-addon">
+									<i class="fa fa-envelope-o"></i>
+								</span>
+									<i class="fa fa-exclamation-circle tooltips" data-original-title="Invalid email!" data-container="body"></i>
+									<input id="email" class="input-error form-control" type="text" placeholder="Email Address">
+								</div>
+							</div>
+							<div class="col-sm-2">
+								<p class="help-block">With tooltip</p>
+							</div>
+						</div>
+						<div class="form-group">
+							<label class="col-md-2 control-label">Password</label>
+							<div class="col-md-8">
+								<div class="input-group input-icon right">
+									<span class="input-group-addon">
+									<i class="fa fa-key"></i>
+								</span>
+									<i class="fa fa-exclamation-circle tooltips" data-original-title="Password too long!" data-container="body"></i>
+									<input type="password" class="input-error form-control" placeholder="Password">
+								</div>
+							</div>
+							<div class="col-sm-2">
+								<p class="help-block">With tooltip</p>
+							</div>
+						</div>
+						<div class="form-group has-success">
+							<label class="col-md-2 control-label">Input Addon Success</label>
+							<div class="col-md-8">
+								<div class="input-group input-icon right">
+									<span class="input-group-addon">
+									<i class="fa fa-envelope-o"></i>
+								</span>
+									<i class="fa fa-check-circle tooltips" data-original-title="Email is valid!" data-container="body"></i>
+									<input id="email" class="input-error form-control" type="text" placeholder="Email Address">
+								</div>
+							</div>
+							<div class="col-sm-2">
+								<p class="help-block">Email is valid!</p>
+							</div>
+						</div>
+						<div class="form-group has-error">
+							<label class="col-md-2 control-label">Input Addon Error</label>
+							<div class="col-md-8">
+								<div class="input-group input-icon right">
+									<span class="input-group-addon">
+									<i class="fa fa-key"></i>
+								</span>
+									<i class="fa fa-exclamation-circle tooltips" data-original-title="Password too long!" data-container="body"></i>
+									<input type="password" class="input-error form-control" placeholder="Password">
+								</div>
+							</div>
+							<div class="col-sm-2">
+								<p class="help-block">Error!</p>
+							</div>
+						</div>
+						<div class="form-group">
+							<label class="col-md-2 control-label">Left Icon</label>
+							<div class="col-md-8">
+								<div class="input-icon">
+									<i class="fa fa-fw fa-bell-o"></i>
+									<input type="text" class="form-control" placeholder="Left icon">
+								</div>
+							</div>
+						</div>
+						<div class="form-group">
+							<label class="col-md-2 control-label">Right Icon</label>
+							<div class="col-md-8">
+								<div class="input-icon right">
+									<i class="fa fa-fw fa-bell-o"></i>
+									<input type="text" class="form-control" placeholder="Right icon">
+								</div>
+							</div>
+							<div class="col-sm-2">
+								<p class="help-block">Icon on right</p>
+							</div>
+						</div>
+						<div class="form-group">
+							<label class="col-md-2 control-label">Checkbox Addon</label>
+							<div class="col-md-8">
+								<div class="input-group">
+									<div class="input-group-addon"><input type="checkbox"></div>
+									<input type="text" class="form-control">
+								</div>
+							</div>
+						</div>
+						<div class="form-group">
+							<label class="col-md-2 control-label">Checkbox Addon</label>
+							<div class="col-md-8">
+								<div class="input-group">
+									<input type="text" class="form-control">
+									<div class="input-group-addon"><input type="checkbox"></div>
+
+								</div>
+							</div>
+							<div class="col-sm-2">
+								<p class="help-block">Checkbox on right</p>
+							</div>
+						</div>
+						<div class="form-group">
+							<label class="col-md-2 control-label">Radio Addon</label>
+							<div class="col-md-8">
+								<div class="input-group">
+									<div class="input-group-addon"><input type="radio"></div>
+									<input type="text" class="form-control">
+								</div>
+							</div>
+						</div>
+						<div class="form-group">
+							<label class="col-md-2 control-label">Radio Addon</label>
+							<div class="col-md-8">
+								<div class="input-group">
+									<input type="text" class="form-control">
+									<div class="input-group-addon"><input type="radio"></div>
+
+								</div>
+							</div>
+							<div class="col-sm-2">
+								<p class="help-block">Radio on right</p>
+							</div>
+						</div>
+						<div class="form-group">
+							<label class="col-md-2 control-label">Input Processing</label>
+							<div class="col-md-8">
+								<div class="input-icon left spinner">
+									<i class="fa fa-fw fa-spin fa-spinner"></i>
+									<input id="email" class="input-error form-control" type="text" placeholder="Processing...">
+								</div>
+							</div>
+						</div>
+						<div class="form-group">
+							<label class="col-md-2 control-label">Input Processing</label>
+							<div class="col-md-8">
+								<div class="input-icon right spinner">
+									<i class="fa fa-fw fa-spin fa-spinner"></i>
+									<input id="email" class="input-error form-control" type="text" placeholder="Processing...">
+								</div>
+							</div>
+							<div class="col-sm-2">
+								<p class="help-block">Processing right</p>
+							</div>
+						</div>
+						<div class="form-group">
+							<label class="col-md-2 control-label">Static Paragraph</label>
+							<div class="col-md-8">
+								<p class="form-control">email@example.com</p>
+							</div>
+						</div>
+						<div class="form-group">
+							<label class="col-md-2 control-label">Readonly</label>
+							<div class="col-md-8">
+								<input type="text" class="form-control" placeholder="Readonly" readonly="">
+							</div>
+						</div>
+					</form>
+					<div class="panel-footer">
+						<div class="row">
+							<div class="col-sm-8 col-sm-offset-2">
+								<button class="btn-success btn">Submit</button>
+								<button class="btn-default btn">Cancel</button>
+								<button class="btn-inverse btn">Reset</button>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<hr>
+			<div class="panel panel-default">
+				<div class="panel-heading">
+					<h2>Fluid Input Groups</h2>
+				</div>
+				<div class="panel-body">
+					<h3 class="mt0">Addon Groups</h3>
+					<p class="mb20">Input group addons with buttons</p>
+					<form role="form" class="form-horizontal">
+
+						<div class="form-group">
+							<label class="col-md-2 control-label">Button Left</label>
+							<div class="col-md-8">
+								<div class="input-group">
+									<span class="input-group-btn">
+									<button class="btn btn-default" type="button">Action</button>
+								</span>
+									<input type="text" class="form-control">
+								</div>
+							</div>
+						</div>
+						<div class="form-group">
+							<label class="col-md-2 control-label">Button Right</label>
+							<div class="col-md-8">
+								<div class="input-group">
+									<input type="text" class="form-control">
+									<span class="input-group-btn">
+								<button class="btn btn-default" type="button">Action</button>
+								</span>
+								</div>
+							</div>
+						</div>
+
+						<div class="form-group">
+							<label class="col-md-2 control-label">Button Left and Right</label>
+							<div class="col-md-8">
+								<div class="input-group">
+									<span class="input-group-btn">
+									<button class="btn btn-default" type="button">Action</button>
+								</span>
+									<input type="text" class="form-control">
+									<span class="input-group-btn">
+									<button class="btn btn-default" type="button">Action</button>
+								</span>
+								</div>
+							</div>
+						</div>
+
+						<div class="form-group">
+							<label class="col-md-2 control-label">Dropdown Left</label>
+							<div class="col-md-8">
+								<div class="input-group">
+									<div class="input-group-btn">
+										<button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">Dropdown <i class="fa fa-angle-down"></i></button>
+										<ul class="dropdown-menu">
+											<li><a href="#">Action </a></li>
+											<li><a href="#">Another action </a></li>
+											<li><a href="#">Something else here </a></li>
+											<li class="divider"></li>
+											<li><a href="#">Separated link </a></li>
+										</ul>
+									</div>
+									<input type="text" class="form-control">
+								</div>
+							</div>
+						</div>
+						<div class="form-group">
+							<label class="col-md-2 control-label">Dropdown Right</label>
+							<div class="col-md-8">
+								<div class="input-group">
+									<input type="text" class="form-control">
+									<div class="input-group-btn">
+										<button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">Dropdown <i class="fa fa-angle-down"></i></button>
+										<ul class="dropdown-menu">
+											<li><a href="#">Action </a></li>
+											<li><a href="#">Another action </a></li>
+											<li><a href="#">Something else here </a></li>
+											<li class="divider"></li>
+											<li><a href="#">Separated link </a></li>
+										</ul>
+									</div>
+
+								</div>
+							</div>
+						</div>
+
+						<div class="form-group">
+							<label class="col-md-2 control-label">Both Sides</label>
+							<div class="col-md-8">
+								<div class="input-group">
+									<div class="input-group-btn">
+										<button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">Dropdown <i class="fa fa-angle-down"></i></button>
+										<ul class="dropdown-menu">
+											<li><a href="#">Action </a></li>
+											<li><a href="#">Another action </a></li>
+											<li><a href="#">Something else here </a></li>
+											<li class="divider"></li>
+											<li><a href="#">Separated link </a></li>
+										</ul>
+									</div>
+									<input type="text" class="form-control">
+									<div class="input-group-btn">
+										<button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">Dropdown <i class="fa fa-angle-down"></i></button>
+										<ul class="dropdown-menu pull-right">
+											<li><a href="#">Action </a></li>
+											<li><a href="#">Another action </a></li>
+											<li><a href="#">Something else here </a></li>
+											<li class="divider"></li>
+											<li><a href="#">Separated link </a></li>
+										</ul>
+									</div>
+								</div>
+							</div>
+						</div>
+
+						<div class="form-group">
+							<label class="col-md-2 control-label">Dropdown Group Left</label>
+							<div class="col-md-8">
+								<div class="input-group">
+									<div class="input-group-btn">
+										<button type="button" class="btn btn-default" tabindex="-1">Action</button>
+										<button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" tabindex="-1">
+									<i class="fa fa-angle-down"></i>
+									</button>
+										<ul class="dropdown-menu" role="menu">
+											<li><a href="#">Action </a></li>
+											<li><a href="#">Another action </a></li>
+											<li><a href="#">Something else here </a></li>
+											<li class="divider"></li>
+											<li><a href="#">Separated link </a></li>
+										</ul>
+									</div>
+									<input type="text" class="form-control">
+								</div>
+							</div>
+						</div>
+						<div class="form-group">
+							<label class="col-md-2 control-label">Dropdown Group Right</label>
+							<div class="col-md-8">
+								<div class="input-group">
+									<input type="text" class="form-control">
+									<div class="input-group-btn">
+										<button type="button" class="btn btn-default" tabindex="-1">Action</button>
+										<button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" tabindex="-1"><i class="fa fa-angle-down"></i></button>
+										<ul class="dropdown-menu pull-right" role="menu">
+											<li><a href="#">Action </a></li>
+											<li><a href="#">Another action </a>
+											</li>
+											<li><a href="#">Something else here </a></li>
+											<li class="divider"></li>
+											<li><a href="#">Separated link </a></li>
+										</ul>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="form-group mb0">
+							<label class="col-md-2 control-label">Both Sides</label>
+							<div class="col-md-8">
+								<div class="input-group">
+									<div class="input-group-btn">
+										<button type="button" class="btn btn-default" tabindex="-1">Action</button>
+										<button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" tabindex="-1"><i class="fa fa-angle-down"></i></button>
+										<ul class="dropdown-menu pull-right" role="menu">
+											<li><a href="#">Action </a></li>
+											<li><a href="#">Another action </a>
+											</li>
+											<li><a href="#">Something else here </a></li>
+											<li class="divider"></li>
+											<li><a href="#">Separated link </a></li>
+										</ul>
+									</div>
+									<input type="text" class="form-control">
+									<div class="input-group-btn">
+										<button type="button" class="btn btn-default" tabindex="-1">Action</button>
+										<button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" tabindex="-1"><i class="fa fa-angle-down"></i></button>
+										<ul class="dropdown-menu pull-right" role="menu">
+											<li><a href="#">Action </a></li>
+											<li><a href="#">Another action </a>
+											</li>
+											<li><a href="#">Something else here </a></li>
+											<li class="divider"></li>
+											<li><a href="#">Separated link </a></li>
+										</ul>
+									</div>
+								</div>
+							</div>
+						</div>
+					</form>
+				</div>
+			</div>
+			<hr>
+			<div class="panel panel-default">
+				<div class="panel-heading">
+					<h2>Validation States</h2>
+				</div>
+				<div class="panel-body pb0">
+					<p class="mb20">Validation states with icons in left and right</p>
+					<div class="row">
+						<div class="col-md-6">
+
+							<form>
+								<div class="form-group">
+									<div class="input-icon right">
+										<i class="fa fa-fw fa-info-circle tooltips" data-original-title="Email address" data-container="body"></i>
+										<input type="text" class="form-control" placeholder="Email address">
+									</div>
+								</div>
+								<div class="form-group has-success">
+									<div class="input-icon right">
+										<i class="fa fa-fw fa-check-circle tooltips" data-original-title="You look OK!" data-container="body"></i>
+										<input type="text" class="form-control" placeholder="Success!">
+									</div>
+								</div>
+								<div class="form-group has-warning">
+									<div class="input-icon right">
+										<i class="fa fa-fw fa-warning tooltips" data-original-title="please provide an email" data-container="body"></i>
+										<input type="text" class="form-control" placeholder="Warning!">
+									</div>
+								</div>
+								<div class="form-group has-error">
+									<div class="input-icon right">
+										<i class="fa fa-fw fa-exclamation-circle tooltips" data-original-title="please write a valid email" data-container="body"></i>
+										<input type="text" class="form-control" placeholder="Error!">
+									</div>
+								</div>
+							</form>
+
+						</div>
+						<div class="col-md-6">
+
+							<form>
+								<div class="form-group">
+									<div class="input-icon left">
+										<i class="fa fa-fw fa-info-circle tooltips" data-original-title="Email address" data-container="body"></i>
+										<input type="text" class="form-control" placeholder="Email address">
+									</div>
+								</div>
+								<div class="form-group has-success">
+									<div class="input-icon left">
+										<i class="fa fa-fw fa-check-circle tooltips" data-original-title="You look OK!" data-container="body"></i>
+										<input type="text" class="form-control" placeholder="Success!">
+									</div>
+								</div>
+								<div class="form-group has-warning">
+									<div class="input-icon left">
+										<i class="fa fa-fw fa-warning tooltips" data-original-title="please provide an email" data-container="body"></i>
+										<input type="text" class="form-control" placeholder="Warning!">
+									</div>
+								</div>
+								<div class="form-group has-error">
+									<div class="input-icon left">
+										<i class="fa fa-fw fa-exclamation-circle tooltips" data-original-title="please write a valid email" data-container="body"></i>
+										<input type="text" class="form-control" placeholder="Error!">
+									</div>
+								</div>
+							</form>
+
+						</div>
+					</div>
+				</div>
+			</div>
+			<hr>
+			<div class="panel panel-default">
+				<div class="panel-heading">
+					<h2>Grids</h2>
+				</div>
+				<div class="panel-body">
+					<p class="mb20">Using <a href="scaffolding-grids.php">Grids</a>, any input box can be placed anywhere and be of any size!</p>
+					<form>
+						<div class="form-group">
+							<div class="row">
+								<div class="col-xs-12">
+									<input type="text" class="form-control" placeholder=".col-xs-12">
+								</div>
+							</div>
+						</div>
+						<div class="form-group">
+							<div class="row">
+								<div class="col-xs-2">
+									<input type="text" class="form-control" placeholder=".col-xs-2">
+								</div>
+								<div class="col-xs-10">
+									<input type="text" class="form-control" placeholder=".col-xs-10">
+								</div>
+							</div>
+						</div>
+						<div class="form-group">
+							<div class="row">
+								<div class="col-xs-3">
+									<input type="text" class="form-control" placeholder=".col-xs-3">
+								</div>
+								<div class="col-xs-9">
+									<input type="text" class="form-control" placeholder=".col-xs-9">
+								</div>
+							</div>
+						</div>
+						<div class="form-group">
+							<div class="row">
+								<div class="col-xs-4">
+									<input type="text" class="form-control" placeholder=".col-xs-4">
+								</div>
+								<div class="col-xs-8">
+									<input type="text" class="form-control" placeholder=".col-xs-8">
+								</div>
+							</div>
+						</div>
+						<div class="form-group">
+							<div class="row">
+								<div class="col-xs-5">
+									<input type="text" class="form-control" placeholder=".col-xs-5">
+								</div>
+								<div class="col-xs-7">
+									<input type="text" class="form-control" placeholder=".col-xs-7">
+								</div>
+							</div>
+						</div>
+						<div class="form-group">
+							<div class="row">
+								<div class="col-xs-6">
+									<input type="text" class="form-control" placeholder=".col-xs-6">
+								</div>
+								<div class="col-xs-6">
+									<input type="text" class="form-control" placeholder=".col-xs-6">
+								</div>
+							</div>
+						</div>
+						<div class="form-group">
+							<div class="row">
+								<div class="col-xs-4">
+									<input type="text" class="form-control" placeholder=".col-xs-4">
+								</div>
+								<div class="col-xs-4">
+									<input type="text" class="form-control" placeholder=".col-xs-4">
+								</div>
+								<div class="col-xs-4">
+									<input type="text" class="form-control" placeholder=".col-xs-4">
+								</div>
+							</div>
+						</div>
+						<div class="form-group">
+							<div class="row">
+								<div class="col-xs-3">
+									<input type="text" class="form-control" placeholder=".col-xs-3">
+								</div>
+								<div class="col-xs-6">
+									<input type="text" class="form-control" placeholder=".col-xs-6">
+								</div>
+								<div class="col-xs-3">
+									<input type="text" class="form-control" placeholder=".col-xs-3">
+								</div>
+							</div>
+						</div>
+						<div class="form-group">
+							<div class="row">
+								<div class="col-xs-2">
+									<input type="text" class="form-control" placeholder=".col-xs-2">
+								</div>
+								<div class="col-xs-8">
+									<input type="text" class="form-control" placeholder=".col-xs-8">
+								</div>
+								<div class="col-xs-2">
+									<input type="text" class="form-control" placeholder=".col-xs-2">
+								</div>
+							</div>
+						</div>
+						<div class="form-group">
+							<div class="row">
+								<div class="col-xs-3">
+									<input type="text" class="form-control" placeholder=".col-xs-3">
+								</div>
+								<div class="col-xs-3">
+									<input type="text" class="form-control" placeholder=".col-xs-3">
+								</div>
+								<div class="col-xs-3">
+									<input type="text" class="form-control" placeholder=".col-xs-3">
+								</div>
+								<div class="col-xs-3">
+									<input type="text" class="form-control" placeholder=".col-xs-3">
+								</div>
+							</div>
+						</div>
+						<div class="form-group">
+							<div class="row">
+								<div class="col-xs-5">
+									<input type="text" class="form-control" placeholder=".col-xs-5">
+								</div>
+								<div class="col-xs-2">
+									<input type="text" class="form-control" placeholder=".col-xs-2">
+								</div>
+								<div class="col-xs-5">
+									<input type="text" class="form-control" placeholder=".col-xs-5">
+								</div>
+							</div>
+						</div>
+						<div class="form-group mb0">
+							<div class="row">
+								<div class="col-xs-2">
+									<input type="text" class="form-control" placeholder=".col-xs-2">
+								</div>
+								<div class="col-xs-2">
+									<input type="text" class="form-control" placeholder=".col-xs-2">
+								</div>
+								<div class="col-xs-2">
+									<input type="text" class="form-control" placeholder=".col-xs-2">
+								</div>
+								<div class="col-xs-2">
+									<input type="text" class="form-control" placeholder=".col-xs-2">
+								</div>
+								<div class="col-xs-2">
+									<input type="text" class="form-control" placeholder=".col-xs-2">
+								</div>
+								<div class="col-xs-2">
+									<input type="text" class="form-control" placeholder=".col-xs-2">
+								</div>
+							</div>
+						</div>
+
+					</form>
+				</div>
+			</div>
+		</div>
+	</div>
+</body>
+
+</html>

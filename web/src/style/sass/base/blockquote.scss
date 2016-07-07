@@ -1,0 +1,44 @@
+@import "./variable";
+
+blockquote {
+    margin: $margin-blockquote;
+    font-size: $font-size-blockquote;
+    border-left: $border-left-blockquote;
+    font-style: italic;
+    padding: $padding-blockquote;
+
+    p:last-child, ul:last-child, ol:last-child {
+        margin-bottom: 0;
+    }
+
+    footer, small {
+        display: block;
+        font-size: 80%;
+        line-height: 1.54;
+        color: $small-footer-color-blockquote;
+    }
+
+    footer:before, small:before {
+        content: '\2014 \00A0';
+    }
+
+    .pull-right {
+        border-right-width: $pull-right-blockquote;
+    }
+}
+
+.blockquote-reverse, blockquote.pull-right {
+    padding-right: $blockquote-right;
+    padding-left: 0;
+    border-right: $border-left-blockquote;
+    border-left: 0;
+    text-align: right;
+
+    footer:before, small:before {
+        content: '';
+    }
+
+    footer:after, small:after {
+        content: '\00A0 \2014';
+    }
+}

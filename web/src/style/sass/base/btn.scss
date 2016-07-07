@@ -1,0 +1,581 @@
+@import "./variable/btn";
+
+.btn {
+    position: relative;
+    box-shadow: $btn-box-shadow;
+    display: inline-block;
+    margin-bottom: 0;
+    font-weight: 400;
+    text-align: center;
+    vertical-align: middle;
+    touch-action: manipulation;
+    cursor: pointer;
+    background-image: none;
+    border: $btn-border;
+    white-space: nowrap;
+    padding: $btn-padding;
+    font-size: $btn-font-size;
+    line-height: $btn-line-height;
+    border-radius: $btn-border-radius;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+
+    &.dropdown-toggle {
+        min-width: 20px;
+    }
+
+    &:focus, &:active:focus, &.active:focus, &.focus, &:active.focus, &.active.focus {
+        outline: thin dotted;
+        outline: 5px auto -webkit-focus-ring-color;
+        outline-offset: -2px;
+    }
+
+    &:hover, &:focus, &.focus {
+        color: #455a64;
+        text-decoration: none;
+    }
+
+    &:active, &.active {
+        outline: 0;
+        background-image: none;
+        -webkit-box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.125);
+        box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.125);
+    }
+
+    .caret {
+        margin-left: 0;
+    }
+}
+.btn.disabled,
+.btn[disabled],
+fieldset[disabled] .btn {
+  cursor: not-allowed;
+  pointer-events: none;
+  opacity: 0.65;
+  filter: alpha(opacity=65);
+  -webkit-box-shadow: none;
+  box-shadow: none;
+}
+
+.btn-lg .caret {
+  border-width: 5px 5px 0;
+  border-bottom-width: 0;
+}
+.dropup {
+  .caret {
+      border: 0;
+      content: "";
+  }
+  .btn-lg .caret {
+    border-width: 0 5px 5px;
+  }
+
+  .caret:before {
+      content: "\f106";
+  }
+}
+.caret{
+  &:before {
+    content: "\f107";
+    font-family: FontAwesome;
+    font-style: normal;
+    font-weight: normal;
+    text-decoration: inherit;
+  }
+}
+
+
+.btn-block {
+  display: block;
+  width: 100%;
+
+  + .btn-block {
+    margin-top: 5px;
+  }
+}
+.caret {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    display: inline;
+    margin-left: 4px;
+    border: 0;
+    vertical-align: initial;
+    line-height: 1;
+
+    &:before {
+        content: "\f107";
+        font-family: FontAwesome;
+        font-style: normal;
+        font-weight: normal;
+        text-decoration: inherit;
+    }
+}
+
+.btn-xs,
+.btn-group-xs > .btn,
+.btn-check-xs > .btn {
+  font-size: 11px;
+  line-height: 12px;
+  padding: 1px 2px;
+}
+.btn-check-xs{
+  line-height: 12px;
+}
+.btn-sm,
+.btn-group-sm > .btn,
+.btn-check-sm > .btn {
+  padding: 3px 8px;
+  line-height: 1.5;
+}
+.btn-check-sm{
+  line-height: 1.5;
+}
+.btn-lg,
+.btn-group-lg > .btn,
+.btn-check-lg > .btn {
+    padding: 7px 16px;
+    line-height: 1.33;
+    font-size: 18px;
+}
+.btn-check-lg{
+  line-height: 1.8px;
+}
+
+//-----------------------------------
+@each $key,$obj in $btn-styles {
+    .btn-#{$key} {
+        color: map-get($obj, "color");
+        background-color: map-get($obj, "background-color");
+        border-color: map-get($obj, "border-color");
+    }
+
+    $disabled: map-get($obj, "disabled");
+    $hover: map-get($obj, "hover");
+    $focus: map-get($obj, "focus");
+    $badge: map-get($obj, "badge");
+
+    .btn-#{$key}.disabled,
+    .btn-#{$key}[disabled],
+    fieldset[disabled] .btn-#{$key},
+    .btn-#{$key}.disabled:hover,
+    .btn-#{$key}[disabled]:hover,
+    fieldset[disabled] .btn-#{$key}:hover,
+    .btn-#{$key}.disabled:focus,
+    .btn-#{$key}[disabled]:focus,
+    fieldset[disabled] .btn-#{$key}:focus,
+    .btn-#{$key}.disabled.focus,
+    .btn-#{$key}[disabled].focus,
+    fieldset[disabled] .btn-#{$key}.focus,
+    .btn-#{$key}.disabled:active,
+    .btn-#{$key}[disabled]:active,
+    fieldset[disabled] .btn-#{$key}:active,
+    .btn-#{$key}.disabled.active,
+    .btn-#{$key}[disabled].active,
+    fieldset[disabled] .btn-#{$key}.active {
+        background-color: map-get($disabled, "background-color");
+        border-color: map-get($disabled, "border-color");
+    }
+    .btn-#{$key}:hover {
+        color: map-get($hover, "color");
+        background-color: map-get($hover, "background-color");
+        border-color: map-get($hover, "border-color");
+    }
+    .btn-#{$key}:focus,
+    .btn-#{$key}:active,
+    .btn-#{$key}.active,
+    .btn-check input[type="radio"]:checked ~ .btn-#{$key},
+    .btn-check input[type="checkbox"]:checked ~ .btn-#{$key},
+    .dropdown-toggle:focus.btn-#{$key} {
+        color: map-get($focus, "color");
+        background-color: map-get($focus, "background-color");
+        border-color: map-get($focus, "border-color");
+    }
+    .btn-#{$key} .badge {
+        color: map-get($badge, "color");
+        background-color: map-get($badge, "background-color");
+    }
+}
+
+.btn-check {
+  display: inline-block;
+  position: relative;
+  
+  input[type="radio"],
+  input[type="checkbox"] {
+    margin: 0;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    opacity: 0;
+  }
+
+  input[type="radio"]:checked ~ .btn,
+  input[type="checkbox"]:checked ~ .btn {
+    outline: 0;
+    -webkit-box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.125);
+    box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.125);
+  }
+}
+
+.btn-link {
+  color: $btn-link-color;
+  font-weight: normal;
+  border-radius: 0;
+}
+.btn-link,
+.btn-link:active,
+.btn-link.active,
+.btn-link[disabled],
+fieldset[disabled] .btn-link {
+  background-color: transparent;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+}
+.btn-link,
+.btn-link:hover,
+.btn-link:focus,
+.btn-link:active {
+  border-color: transparent;
+}
+.btn-link:hover,
+.btn-link:focus {
+  color: $btn-link-hover-color;
+  text-decoration: underline;
+  background-color: transparent;
+}
+.btn-link[disabled]:hover,
+fieldset[disabled] .btn-link:hover,
+.btn-link[disabled]:focus,
+fieldset[disabled] .btn-link:focus {
+  color: $btn-link-disabled-color;
+  text-decoration: none;
+}
+
+@each $key,$obj in $btn-alt-styles {
+
+    $disabled: map-get($obj, "disabled");
+    $hover-focus: map-get($obj, "hover-focus");
+
+    .btn-#{$key}-alt {
+        color: map-get($obj, "color");
+        background-color: rgba(255, 255, 255, 0);
+        border-color: map-get($obj, "border-color");
+        border-width: 1px;
+        border-style: solid;
+        -webkit-box-shadow: none;
+        box-shadow: none;
+
+        &:hover, &:focus, &:active, &.active,
+        .btn-check input[type="radio"]:checked ~ &,
+        .btn-check input[type="checkbox"]:checked ~ & {
+            border-color: map-get($hover-focus, "border-color");
+            background-color: map-get($hover-focus, "background-color");
+            color: map-get($hover-focus, "color");
+        }
+
+        &.dropdown-toggle {
+            border-width: 1px;
+        }
+
+        &.dropdown-toggle.alt-border {
+            border-width: 1px 1px 1px 1px;
+        }
+    }
+    .btn-#{$key}-alt.disabled,
+    .btn-#{$key}-alt[disabled],
+    fieldset[disabled] .btn-#{$key}-alt,
+    .btn-#{$key}-alt.disabled:hover,
+    .btn-#{$key}-alt[disabled]:hover,
+    fieldset[disabled] .btn-#{$key}-alt:hover,
+    .btn-#{$key}-alt.disabled:focus,
+    .btn-#{$key}-alt[disabled]:focus,
+    fieldset[disabled] .btn-#{$key}-alt:focus {
+        box-shadow: none !important;
+        border-color: map-get($disabled, "border-color");
+        color: map-get($disabled, "color");
+    }
+    .btn-#{$key}-alt.disabled:active,
+    .btn-#{$key}-alt[disabled]:active,
+    fieldset[disabled] .btn-#{$key}-alt:active,
+    .btn-#{$key}-alt.disabled.active,
+    .btn-#{$key}-alt[disabled].active,
+    fieldset[disabled] .btn-#{$key}-alt.active {
+        border-color: map-get($disabled, "border-color");
+        background-color: map-get($hover-focus, "background-color");
+        color: map-get($disabled, "color");
+    }
+}
+
+.btn-label {
+    padding: 0 12px 0 8px !important;
+
+    i {
+        padding: 8px;
+        line-height: 14px;
+        left: -8px;
+        width: 32px;
+        position: relative;
+        display: inline-block;
+        background-color: #000000;
+        background-color: rgba(0, 0, 0, 0);
+        zoom: 1;
+        -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr=#00000000, endColorstr=#00000000)";
+        filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr=#00000000, endColorstr=#00000000)";
+        border-radius: 2px 0 0 2px;
+        box-shadow: inset none;
+    }
+
+    &.btn-block {
+        padding-top: 8px !important;
+        padding-bottom: 8px !important;
+
+        i {
+            top: -8px;
+        }
+
+        + span {
+            left: -8px;
+            position: relative;
+        }
+    }
+
+    &.btn-xs {
+        padding: 0 2px 0 4px !important;
+
+        i{
+            width: 16px;
+            left: -4px;
+            line-height: 10px;
+            padding: 2px 2px;
+        }
+    }
+
+    &.btn-sm {
+        padding: 0 8px 0 4px !important;
+
+        i{
+            left: -4px;
+            line-height: 6px;
+            width: 24px;
+        }
+    }
+
+    &.btn-lg {
+        padding: 0 16px !important;
+
+        i {
+            left: -16px;
+            line-height: 22px;
+            width: 40px;
+        }
+    }
+}
+
+.btn-group {
+    padding: 0;
+
+    > .btn + .dropdown-toggle,
+    > .btn-check .btn + .dropdown-toggle {
+      padding-left: 5px;
+      padding-right: 5px;
+    }
+
+    > .btn-lg + .dropdown-toggle,
+    > .btn-check .btn-lg + .dropdown-toggle {
+      padding-left: 15px;
+      padding-right: 15px;
+    }
+
+    .btn + .btn,
+    .btn + .btn-group,
+    .btn + .btn-check,
+    .btn-group + .btn,
+    .btn-group + .btn-group,
+    .btn-group + .btn-check,
+    .btn-check + .btn-check,
+    .btn-check + .btn,
+    .btn-check + .btn-group {
+      margin-left: -1px;
+    }
+
+    > .btn:not(:first-child):not(:last-child):not(.dropdown-toggle),
+    > .btn-check:not(:first-child):not(:last-child):not(.dropdown-toggle) .btn {
+      border-radius: 0;
+    }
+    > .btn:first-child,
+    > .btn-check:first-child .btn {
+      margin-left: 0;
+    }
+    > .btn:first-child:not(:last-child):not(.dropdown-toggle),
+    > .btn-check:first-child:not(:last-child):not(.dropdown-toggle) .btn {
+      border-bottom-right-radius: 0;
+      border-top-right-radius: 0;
+    }
+    > .btn:last-child:not(:first-child),
+    > .dropdown-toggle:not(:first-child),
+    > .btn-check:not(:first-child) .btn {
+      border-bottom-left-radius: 0;
+      border-top-left-radius: 0;
+    }
+    > .btn-group {
+      float: left;
+    }
+    > .btn-group:not(:first-child):not(:last-child) > .btn,
+    > .btn-group:not(:first-child):not(:last-child) > .btn-check .btn {
+      border-radius: 0;
+    }
+    > .btn-group:first-child > .btn:last-child,
+    > .btn-group:first-child > .btn-check:last-child .btn,
+    > .btn-group:first-child > .dropdown-toggle {
+      border-bottom-right-radius: 0;
+      border-top-right-radius: 0;
+    }
+    > .btn-group:last-child > .btn:first-child,
+    > .btn-group:last-child > .btn-check:first-child .btn {
+      border-bottom-left-radius: 0;
+      border-top-left-radius: 0;
+    }
+    .dropdown-toggle:active {
+      outline: 0;
+    }
+    > .btn + .dropdown-toggle {
+      padding-left: 8px;
+      padding-right: 8px;
+    }
+    > .btn-lg + .dropdown-toggle {
+      padding-left: 12px;
+      padding-right: 12px;
+    }
+}
+
+.btn-toolbar {
+  margin-left: -5px;
+
+  .btn-group {
+    float: none;
+  }
+  > .btn + .btn,
+  > .btn-group + .btn,
+  > .btn + .btn-group,
+  > .btn-group + .btn-group {
+    margin-left: 0px;
+  }
+
+  > .btn,
+  > .btn-group,
+  > .input-group {
+    margin-left: 5px;
+  }
+}
+
+.btn-group, .btn-group-vertical {
+  position: relative;
+  display: inline-block;
+  vertical-align: middle;
+
+  > .btn, .btn-check {
+    position: relative;
+    float: left;
+  }
+  > .btn:hover,
+  > .btn:focus,
+  > .btn:active,
+  > .btn.active,
+  > .btn-check .btn:hover,
+  > .btn-check .btn:focus,
+  > .btn-check .btn:active,
+  > .btn-check .btn.active {
+    z-index: 2;
+  }
+
+  > .btn.fc-state-active {
+    z-index: 2;
+  }
+
+  .btn-group + .btn-group {
+    margin-left: 10px;
+  }
+}
+
+.btn-group-vertical {
+  > .btn,
+  > .btn-check,
+  > .btn-group,
+  > .btn-group > .btn {
+    display: block;
+    float: none;
+    width: 100%;
+    max-width: 100%;
+  }
+
+  > .btn-group > .btn {
+    float: none;
+  }
+
+  > .btn + .btn,
+  > .btn + .btn-group,
+  > .btn + .btn-check,
+  > .btn-group + .btn,
+  > .btn-group + .btn-group,
+  > .btn-group + .btn-check,
+  > .btn-check + .btn-check,
+  > .btn-check + .btn,
+  > .btn-check + .btn-group {
+    margin-top: -1px;
+    margin-left: 0;
+  }
+  > .btn:not(:first-child):not(:last-child),
+  > .btn-check:not(:first-child):not(:last-child) .btn {
+    border-radius: 0;
+  }
+  > .btn:first-child:not(:last-child),
+  > .btn-check:first-child:not(:last-child) .btn  {
+    border-top-right-radius: 2px;
+    border-bottom-right-radius: 0;
+    border-bottom-left-radius: 0;
+  }
+  > .btn:last-child:not(:first-child),
+  > .btn-check:last-child:not(:first-child) .btn {
+    border-bottom-left-radius: 2px;
+    border-top-right-radius: 0;
+    border-top-left-radius: 0;
+  }
+  > .btn-group:not(:first-child):not(:last-child) > .btn {
+    border-radius: 0;
+  }
+  > .btn-group:first-child:not(:last-child) > .btn:last-child,
+  > .btn-group:first-child:not(:last-child) > .dropdown-toggle {
+    border-bottom-right-radius: 0;
+    border-bottom-left-radius: 0;
+  }
+  > .btn-group:last-child:not(:first-child) > .btn:first-child {
+    border-top-right-radius: 0;
+    border-top-left-radius: 0;
+  }
+}
+
+.btn-group-justified {
+  display: table;
+  width: 100%;
+  table-layout: fixed;
+  border-collapse: separate;
+
+  > .btn,
+  > .btn-group {
+    float: none;
+    display: table-cell;
+    width: 1%;
+  }
+
+  > .btn-group .btn {
+    width: 100%;
+  }
+  > .btn-group .dropdown-menu {
+    left: auto;
+  }
+}
